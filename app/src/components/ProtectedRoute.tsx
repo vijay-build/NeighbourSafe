@@ -20,7 +20,7 @@ export function ProtectedRoute({ children, allow }: { children: ReactNode; allow
   }
 
   if (!demoMode && (!session || !profile)) return <Navigate to="/login" replace />
-  if (demoMode && !profile) return <Navigate to="/login" replace />
+  if (!profile) return <Navigate to="/login" replace />
   if (!allow.includes(profile.role)) return <Navigate to="/login" replace />
 
   return <>{children}</>

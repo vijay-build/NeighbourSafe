@@ -63,6 +63,8 @@ export function StudentReport() {
           category,
           title: title.trim(),
           description: description.trim() || null,
+          latitude: null,
+          longitude: null,
           image_path: null,
           status: 'submitted',
           priority: 'attention',
