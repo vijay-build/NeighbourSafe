@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#ffddb8",
+          "surface-container-lowest": "#010f1f",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-primary-fixed-variant": "#783200",
+          "on-secondary": "#472a00",
+          "on-tertiary": "#003824",
+          "surface-variant": "#273647",
+          "secondary-container": "#ee9800",
+          "surface-container": "#122131",
+          "secondary-fixed-dim": "#ffb95f",
+          "surface-container-highest": "#273647",
+          "error-container": "#93000a",
+          "primary-fixed": "#ffdbca",
+          "on-secondary-fixed": "#2a1700",
+          "on-background": "#d4e4fa",
+          "on-surface": "#d4e4fa",
+          "primary": "#ffb690",
+          "tertiary-container": "#00b07a",
+          "surface": "#051424",
+          "on-surface-variant": "#e0c0b1",
+          "surface-bright": "#2c3a4c",
+          "tertiary": "#4edea3",
+          "background": "#051424",
+          "on-error-container": "#ffdad6",
+          "surface-dim": "#051424",
+          "on-tertiary-fixed-variant": "#005236",
+          "on-tertiary-fixed": "#002113",
+          "on-secondary-container": "#5b3800",
+          "outline": "#a78b7d",
+          "on-error": "#690005",
+          "error": "#ffb4ab",
+          "primary-fixed-dim": "#ffb690",
+          "on-primary": "#552100",
+          "primary-container": "#f97316",
+          "surface-container-low": "#0d1c2d",
+          "secondary": "#ffb95f",
+          "inverse-surface": "#d4e4fa",
+          "outline-variant": "#584237",
+          "tertiary-fixed-dim": "#4edea3",
+          "surface-tint": "#ffb690",
+          "inverse-on-surface": "#233143",
+          "on-primary-container": "#582200",
+          "on-tertiary-container": "#003b26",
+          "surface-container-high": "#1c2b3c",
+          "on-primary-fixed": "#341100",
+          "inverse-primary": "#9d4300",
+          "tertiary-fixed": "#6ffbbe"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-md": "0.75rem",
+          "gutter": "1rem",
+          "space-lg": "1rem",
+          "gutter-compact": "0.5rem",
+          "margin-mobile": "0.75rem",
+          "space-xl": "1.5rem",
+          "space-sm": "0.5rem",
+          "margin": "1.5rem"
+        },
+        "fontFamily": {
+          "label-sm": [
+            "JetBrains Mono", "monospace"
+          ],
+          "body-sm": [
+            "Space Grotesk", "sans-serif"
+          ],
+          "headline-lg": [
+            "Space Grotesk", "sans-serif"
+          ],
+          "code-sm": [
+            "JetBrains Mono", "monospace"
+          ],
+          "headline-sm": [
+            "Space Grotesk", "sans-serif"
+          ],
+          "code-xs": [
+            "JetBrains Mono", "monospace"
+          ],
+          "headline-md": [
+            "Space Grotesk", "sans-serif"
+          ],
+          "display-xl": [
+            "Space Grotesk", "sans-serif"
+          ],
+          "body-md": [
+            "Space Grotesk", "sans-serif"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk", "sans-serif"
+          ],
+          "label-md": [
+            "JetBrains Mono", "monospace"
+          ],
+          "body-lg": [
+            "Space Grotesk", "sans-serif"
+          ]
+        },
+        "fontSize": {
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "code-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "500"
+            }
+          ],
+          "code-xs": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "fontWeight": "600"
+            }
+          ],
+          "display-xl": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.6)] border-r border-surface-variant/40"><div class="flex flex-col"><div class="h-14 px-space-md flex items-center gap-space-sm bg-surface-container-low/60 border-b border-surface-variant/40"><img alt="Brand logo - Solar Flare Sentinel" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VHjsEZ3VlGCWesBFIWRkmdKO6uHewYDUKn_aLv7mBfATBEt80Gmu0jss1rxMrhbEtCiqv5PyW1aIa2ztu1pCWRDs2X9BuTvy_KQbKM3JNdg2JadKkiloR4aX-oEhSov_AAGj5sUhSDAwMB4fhxhJ9gca64fiXT01dq0Pf_9zfYO_ZwxUpIwwbNbL9NbFMJU9Q9I96goytvkNMvixWt-imlMlQxsbtxpbgB65zVupqJ3UwHOON3Vuw_8I4"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] text-on-surface tracking-tight leading-none font-bold">NeighbourSafe</span><div class="flex items-center gap-space-xs mt-0.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_#f97316]"></span><span class="font-code-xs text-code-xs text-secondary uppercase tracking-wider">SOLAR OPS v2.4</span></div></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-code-xs text-code-xs text-outline uppercase tracking-widest">Operations Command</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_14px_rgba(249,115,22,0.4)]"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="security-command" href="#"><span class="material-symbols-outlined text-[18px]">shield</span><span class="font-body-md text-body-md">Overview / Command</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="campus-map" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Campus Map</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="incidents" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-md text-body-md">Incidents</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-code-xs text-code-xs font-bold">3 ACT</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="community-reports" href="#"><span class="material-symbols-outlined text-[18px]">forum</span><span class="font-body-md text-body-md">Community Reports</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_14px_rgba(249,115,22,0.4)]" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[18px] text-on-primary-container">history_edu</span><span class="font-body-md text-body-md text-on-primary-container">Audit Logs / History</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin-governance" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span class="font-body-md text-body-md">Admin / Governance</span></a></nav></div><div class="p-space-sm m-space-sm rounded-lg bg-surface-container-low border border-surface-variant/30"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="relative flex-shrink-0"><div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container border border-primary-container/30"><span class="material-symbols-outlined text-[18px]">security</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate font-semibold">Ofc. Marcus Vance</span><span class="font-code-xs text-code-xs text-outline truncate">#WS-842 • Desk 01</span></div></div><div class="flex items-center"><button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors" title="Duty Settings" type="button"><span class="material-symbols-outlined text-[18px]">tune</span></button></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/95 backdrop-blur-xl z-40 px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.5)] border-b border-surface-variant/40 flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container text-[20px]">apartment</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Demo University — Main Campus</span></div><div class="h-4 w-px bg-surface-variant"></div><div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high border border-tertiary-container/30"><span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_6px_#4edea3]"></span><span class="font-code-xs text-code-xs text-tertiary tracking-wider uppercase">LIVE FEED SYNC</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-outline text-[16px]">search</span><input class="h-8 pl-8 pr-12 w-64 bg-surface-container-low border border-surface-variant/50 text-on-surface placeholder-outline font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-container focus:border-primary-container transition-all" placeholder="Search incidents, units, cameras..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-high text-outline font-code-xs text-code-xs">⌘K</kbd></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-low border border-surface-variant/30 text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">radar</span><span class="font-code-xs text-code-xs text-secondary uppercase font-medium">All 8 Zones Active</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-low border border-surface-variant/30 text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary-container">radio</span><span class="font-code-xs text-code-xs text-on-surface">Ch 4 • Patrol Secure</span></div><button class="h-8 px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-variant text-secondary-fixed font-code-xs text-code-xs uppercase flex items-center gap-1 transition-colors border border-secondary/20" type="button"><span class="material-symbols-outlined text-[14px] text-secondary">experiment</span>Simulate Event</button><div class="relative"><button class="p-1.5 text-on-surface-variant hover:text-on-surface relative rounded hover:bg-surface-container-high transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button></div><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold shadow-[0_0_10px_rgba(249,115,22,0.4)]"><span class="material-symbols-outlined text-[18px]">person</span></div></div></header><main class="w-full pt-14 px-gutter bg-surface min-h-screen"><div class="flex flex-col w-full pb-12">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl pt-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1.5">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded bg-primary-container/20 text-primary-container border border-primary-container/30">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+</span>
+<span class="font-code-xs text-code-xs tracking-widest text-primary font-bold uppercase">SECURITY COMPLIANCE &amp; GOVERNANCE RECORD</span>
+<span class="h-1.5 w-1.5 rounded-full bg-surface-variant"></span>
+<span class="font-code-xs text-code-xs text-secondary font-medium uppercase">BLOCK #984,204 • WORM LOCKED</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">Incident History &amp; Audit Ledger</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Immutable chain-of-custody logs, verification timestamps, and past incident outcomes.
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-low border border-surface-variant/40 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock_clock</span>
+<div class="flex flex-col">
+<span class="font-code-xs text-code-xs text-outline uppercase">Retention Policy</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium">7 Years (FERPA/Clery Act)</span>
+</div>
+</div>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all border border-surface-variant/50" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+        Preset: Safety Board
+      </button>
+<div class="flex items-center rounded-lg bg-primary-container text-on-primary-container shadow-[0_0_12px_rgba(249,115,22,0.35)] hover:bg-inverse-primary transition-all">
+<button class="h-9 px-space-md font-label-md text-label-md flex items-center gap-1.5 font-bold" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+          Export Audit Ledger
+        </button>
+<span class="h-4 w-px bg-on-primary-container/20"></span>
+<button class="h-9 px-2 flex items-center justify-center hover:bg-black/10 rounded-r-lg text-on-primary-container" title="More export formats" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-low border border-surface-variant/40 rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-outline uppercase tracking-wider">Total Audited Events (7D)</span>
+<span class="material-symbols-outlined text-outline text-[18px]">receipt_long</span>
+</div>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-display-xl text-display-xl text-on-surface leading-none font-bold">148</span>
+<span class="font-code-xs text-code-xs text-secondary flex items-center font-bold">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +12%
+        </span>
+</div>
+<div class="mt-3 flex items-center justify-between text-on-surface-variant font-code-xs text-code-xs">
+<span>100% Cryptographic Match</span>
+<span class="text-primary font-bold">0 Flagged Hashes</span>
+</div>
+</div>
+<div class="bg-surface-container-low border border-surface-variant/40 rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-outline uppercase tracking-wider">Avg Dispatch Reaction</span>
+<span class="material-symbols-outlined text-primary-container text-[18px]">timer</span>
+</div>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-display-xl text-display-xl text-on-surface leading-none font-bold">2m 04s</span>
+<span class="font-code-xs text-code-xs text-primary-container flex items-center font-bold">
+<span class="material-symbols-outlined text-[12px]">arrow_downward</span> -18s vs SLA
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full shadow-[0_0_8px_#f97316]" style="width: 78%;"></div>
+</div>
+</div>
+<div class="bg-surface-container-low border border-surface-variant/40 rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-outline uppercase tracking-wider">Human-in-the-Loop Verifications</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">gavel</span>
+</div>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-display-xl text-display-xl text-on-surface leading-none font-bold">100.0%</span>
+<span class="font-code-xs text-code-xs text-tertiary flex items-center font-bold">Compliant</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-on-surface-variant font-code-xs text-code-xs">
+<span>AI Automated Actions: None</span>
+<span class="text-secondary font-bold">148 Signed Seals</span>
+</div>
+</div>
+<div class="bg-surface-container-low border border-surface-variant/40 rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-outline uppercase tracking-wider">False Positive Ratio</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">model_training</span>
+</div>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-display-xl text-display-xl text-on-surface leading-none font-bold">6.7%</span>
+<span class="font-code-xs text-code-xs text-secondary flex items-center font-bold">Calibration Target &lt;8%</span>
+</div>
+<div class="mt-3 flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#ffb95f]"></span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Sensor Model v4.19 active</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low border border-surface-variant/40 rounded-xl p-space-md shadow-sm mb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center gap-space-md">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-10 pr-16 bg-surface-container-lowest border border-surface-variant/50 text-on-surface placeholder-outline font-body-sm text-body-sm rounded-lg focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" id="incidentSearch" placeholder="Search by Incident ID, zone, officer badge, or signature hash..." type="text" value=""/>
+<div class="absolute right-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-code-xs text-code-xs border border-surface-variant/40">⌘F</kbd>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="flex items-center px-space-sm h-10 rounded-lg bg-surface-container-lowest border border-surface-variant/50 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px] mr-1.5">calendar_today</span>
+<span class="font-code-xs text-code-xs text-on-surface uppercase whitespace-nowrap font-medium">Oct 18 — Oct 25, 2026</span>
+<span class="material-symbols-outlined text-outline text-[16px] ml-2 cursor-pointer">expand_more</span>
+</div>
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container-high border border-surface-variant/50 text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+          All Filters (5)
+        </button>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-primary-container/15 border border-primary-container/40 text-primary-container font-label-sm text-label-sm shadow-[0_0_8px_rgba(249,115,22,0.15)]">
+<span class="text-primary font-code-xs text-code-xs uppercase font-bold">Priority:</span>
+<span class="text-on-surface font-medium">All (4 Levels)</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container ml-1">arrow_drop_down</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-sm text-label-sm hover:border-secondary/50 transition-colors">
+<span class="text-outline uppercase font-code-xs text-code-xs">Status:</span>
+<span class="text-on-surface font-medium">All Statuses</span>
+<span class="material-symbols-outlined text-[14px] text-outline ml-1">arrow_drop_down</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-sm text-label-sm hover:border-secondary/50 transition-colors">
+<span class="text-outline uppercase font-code-xs text-code-xs">Zone:</span>
+<span class="text-on-surface font-medium">All Campus Zones</span>
+<span class="material-symbols-outlined text-[14px] text-outline ml-1">arrow_drop_down</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container border border-surface-variant/40 text-on-surface-variant font-label-sm text-label-sm hover:border-secondary/50 transition-colors">
+<span class="text-outline uppercase font-code-xs text-code-xs">Source:</span>
+<span class="text-on-surface font-medium">All Telemetry &amp; Field</span>
+<span class="material-symbols-outlined text-[14px] text-outline ml-1">arrow_drop_down</span>
+</div>
+<div class="ml-auto flex items-center gap-space-sm">
+<span class="font-code-xs text-code-xs text-outline">SHOWING 8 OF 148 RECORDS</span>
+<button class="text-primary-container hover:text-primary font-code-xs text-code-xs uppercase tracking-wider font-bold" type="button">Reset View</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col xl:flex-row gap-space-lg items-start">
+<div class="w-full xl:w-7/12 flex flex-col bg-surface-container-low border border-surface-variant/40 rounded-xl shadow-md overflow-hidden">
+<div class="px-space-md py-space-sm bg-surface-container-lowest border-b border-surface-variant/40 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[18px]">table_rows</span>
+<span class="font-headline-sm text-[16px] font-bold text-on-surface">Ledger Entries</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-code-xs text-code-xs text-secondary border border-secondary/20">Live Synchronized</span>
+</div>
+<div class="flex items-center gap-1 text-outline font-code-xs text-code-xs">
+<span>SORT BY:</span>
+<button class="text-secondary flex items-center font-bold" type="button">LATEST FIRST <span class="material-symbols-outlined text-[14px]">arrow_downward</span></button>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider border-b border-surface-variant/40">
+<tr>
+<th class="py-2.5 px-space-md font-medium" scope="col">ID &amp; Telemetry</th>
+<th class="py-2.5 px-space-sm font-medium" scope="col">Priority</th>
+<th class="py-2.5 px-space-md font-medium" scope="col">Incident Summary / Location</th>
+<th class="py-2.5 px-space-sm font-medium" scope="col">Initiated</th>
+<th class="py-2.5 px-space-sm font-medium" scope="col">Officer</th>
+<th class="py-2.5 px-space-sm font-medium text-right" scope="col">Reaction</th>
+<th class="py-2.5 px-space-sm font-medium" scope="col">Outcome</th>
+<th class="py-2.5 px-space-md font-medium text-center" scope="col">Audit</th>
+</tr>
+</thead>
+<tbody class="text-on-surface divide-y divide-surface-variant/30">
+<tr class="bg-surface-container-high/60 cursor-pointer shadow-inner transition-colors border-l-2 border-primary-container">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-code-sm text-code-sm text-primary-container font-bold tracking-tight">#NS-INC-0021</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline mt-0.5">DOOR SENSOR #12</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-error-container/40 text-error border border-error/30 font-bold">
+<span class="w-1 h-1 rounded-full bg-error"></span> CRITICAL
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold leading-snug">Exterior Door Latch Failure</span>
+<div class="flex items-center gap-1 mt-0.5 text-on-surface-variant font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[13px] text-primary-container">pin_drop</span>
+<span>Zone 4 • Exam Store Vault Annex</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-code-xs text-code-xs text-on-surface-variant">
+<div>25-Oct-26</div>
+<div class="text-outline">02:17:00</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">M. Vance</span>
+<span class="font-code-xs text-code-xs text-outline">#WS-842</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-code-sm text-code-sm text-primary font-bold">
+                2m 14s
+              </td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-tertiary-container/20 text-tertiary border border-tertiary/30">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> RESOLVED
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-primary-container text-on-primary-container shadow-[0_0_8px_rgba(249,115,22,0.4)] hover:opacity-90" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface font-medium tracking-tight">#NS-INC-0024</span>
+<span class="font-code-xs text-code-xs text-outline mt-0.5">CCTV AI SENSOR</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-secondary-container/30 text-secondary border border-secondary/30 font-bold">
+<span class="w-1 h-1 rounded-full bg-secondary"></span> HIGH
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface leading-snug">After-Hours Activity — Exam Store</span>
+<div class="flex items-center gap-1 mt-0.5 text-on-surface-variant font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[13px] text-outline">pin_drop</span>
+<span>Zone 4 • Corridor E-2 East Wing</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-code-xs text-code-xs text-on-surface-variant">
+<div>25-Oct-26</div>
+<div class="text-outline">01:42:19</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">K. Chen</span>
+<span class="font-code-xs text-code-xs text-outline">#WS-619</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-code-sm text-code-sm text-on-surface-variant">
+                1m 42s
+              </td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-secondary-container/20 text-secondary border border-secondary/30 font-medium">
+<span class="material-symbols-outlined text-[12px]">directions_run</span> DISPATCHED
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface font-medium tracking-tight">#NS-2026-0017</span>
+<span class="font-code-xs text-code-xs text-outline mt-0.5">COMMUNITY REPORT</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-surface-variant text-on-surface-variant border border-surface-variant">
+<span class="w-1 h-1 rounded-full bg-outline"></span> ATTENTION
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface leading-snug">Unattended Equipment Bag</span>
+<div class="flex items-center gap-1 mt-0.5 text-on-surface-variant font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[13px] text-outline">pin_drop</span>
+<span>Zone 2 • Exam Store Corridor</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-code-xs text-code-xs text-on-surface-variant">
+<div>24-Oct-26</div>
+<div class="text-outline">21:05:44</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">J. Ramos</span>
+<span class="font-code-xs text-code-xs text-outline">#WS-104</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-code-sm text-code-sm text-on-surface-variant">
+                3m 10s
+              </td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-tertiary-container/20 text-tertiary border border-tertiary/30">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> RESOLVED
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface font-medium tracking-tight">#NS-INC-0019</span>
+<span class="font-code-xs text-code-xs text-outline mt-0.5">CALLBOX #08</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-surface-variant text-on-surface-variant border border-surface-variant">
+<span class="w-1 h-1 rounded-full bg-outline"></span> NORMAL
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface leading-snug">Escort Service Request</span>
+<div class="flex items-center gap-1 mt-0.5 text-on-surface-variant font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[13px] text-outline">pin_drop</span>
+<span>Zone 7 • West Library Perimeter</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-code-xs text-code-xs text-on-surface-variant">
+<div>24-Oct-26</div>
+<div class="text-outline">19:40:11</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">M. Vance</span>
+<span class="font-code-xs text-code-xs text-outline">#WS-842</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-code-sm text-code-sm text-on-surface-variant">
+                0m 52s
+              </td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-tertiary-container/20 text-tertiary border border-tertiary/30">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> RESOLVED
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface font-medium tracking-tight">#NS-INC-0016</span>
+<span class="font-code-xs text-code-xs text-outline mt-0.5">OPTICAL THERMAL</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-secondary-container/30 text-secondary border border-secondary/30 font-bold">
+<span class="w-1 h-1 rounded-full bg-secondary"></span> HIGH
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface leading-snug">Server Rack High Temperature Fluctuation</span>
+<div class="flex items-center gap-1 mt-0.5 text-on-surface-variant font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[13px] text-outline">pin_drop</span>
+<span>Zone 1 • Server Room Central</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-code-xs text-code-xs text-on-surface-variant">
+<div>24-Oct-26</div>
+<div class="text-outline">14:12:08</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">K. Chen</span>
+<span class="font-code-xs text-code-xs text-outline">#WS-619</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-code-sm text-code-sm text-on-surface-variant">
+                1m 15s
+              </td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-surface-variant text-outline border border-surface-variant">
+<span class="material-symbols-outlined text-[12px]">flaky</span> FALSE ALARM
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-on-surface font-medium tracking-tight">#NS-INC-0012</span>
+<span class="font-code-xs text-code-xs text-outline mt-0.5">ANPR BARRIER</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-surface-variant text-on-surface-variant border border-surface-variant">
+<span class="w-1 h-1 rounded-full bg-outline"></span> NORMAL
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface leading-snug">Unregistered Commercial Plate</span>
+<div class="flex items-center gap-1 mt-0.5 text-on-surface-variant font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[13px] text-outline">pin_drop</span>
+<span>Zone 8 • Gate 2 North Access</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-code-xs text-code-xs text-on-surface-variant">
+<div>23-Oct-26</div>
+<div class="text-outline">09:18:22</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">J. Ramos</span>
+<span class="font-code-xs text-code-xs text-outline">#WS-104</span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-right font-code-sm text-code-sm text-on-surface-variant">
+                0m 45s
+              </td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded font-code-xs text-code-xs bg-tertiary-container/20 text-tertiary border border-tertiary/30">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> RESOLVED
+                </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-space-md py-space-sm bg-surface-container-lowest border-t border-surface-variant/40 flex items-center justify-between text-outline font-code-xs text-code-xs">
+<div class="flex items-center gap-2">
+<span>Row display 1–6 of 148 entries</span>
+<span class="h-3 w-px bg-surface-variant"></span>
+<span>Ledger Hash: <span class="text-secondary font-code-xs font-medium">sha256:7f90e8a8c...83b2</span></span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-6 h-6 rounded flex items-center justify-center bg-surface-container hover:bg-surface-variant text-on-surface disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[14px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold shadow-[0_0_8px_rgba(249,115,22,0.3)]">1</span>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface" type="button">2</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface" type="button">3</button>
+<span>...</span>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container text-on-surface" type="button">25</button>
+<button class="w-6 h-6 rounded flex items-center justify-center bg-surface-container hover:bg-surface-variant text-on-surface" type="button">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full xl:w-5/12 flex flex-col bg-surface-container-low border border-surface-variant/40 rounded-xl shadow-xl overflow-hidden">
+<div class="p-space-md bg-surface-container-lowest border-b border-surface-variant/40 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-error-container/30 text-error font-code-xs text-code-xs font-bold uppercase tracking-wider border border-error/30">
+              INSPECTOR DETAIL
+            </span>
+<span class="font-code-sm text-code-sm text-primary-container font-bold tracking-tight">#NS-INC-0021</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary border border-secondary/30 font-code-xs text-code-xs font-bold">
+<span class="material-symbols-outlined text-[12px] text-secondary">verified</span>
+              WARM AUDITED
+            </span>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-on-surface" title="Print compliance certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Exterior Door Latch Failure</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Perimeter Secure Zone 4 (Exam Store Vault Annex) • Primary Ingress Point D-04
+          </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs p-space-sm bg-surface-container-high/40 text-on-surface font-code-xs text-code-xs border-b border-surface-variant/40">
+<div class="p-2 rounded bg-surface-container-lowest border border-surface-variant/30 flex flex-col">
+<span class="text-outline uppercase">Chain of Custody ID</span>
+<span class="text-secondary font-bold font-code-sm text-code-sm truncate">COC-20261025-0021-V4</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest border border-surface-variant/30 flex flex-col">
+<span class="text-outline uppercase">Authorizing Dispatcher</span>
+<span class="text-on-surface font-medium font-code-sm text-code-sm truncate">Marcus Vance (Badge #WS-842)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest border border-surface-variant/30 flex flex-col">
+<span class="text-outline uppercase">Initial Sensor Signal</span>
+<span class="text-primary-container font-medium font-code-sm text-code-sm">Perimeter Sensor #12</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest border border-surface-variant/30 flex flex-col">
+<span class="text-outline uppercase">Resolution Duration</span>
+<span class="text-tertiary font-bold font-code-sm text-code-sm">14m 10s (Within 15m SLA)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-xs text-code-xs uppercase tracking-widest text-secondary font-bold">SECOND-BY-SECOND AUDIT LOG</span>
+<span class="font-code-xs text-code-xs text-primary-container font-medium">UTC-04:00 EASTERN</span>
+</div>
+<div class="relative pl-6 space-y-5">
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-surface-variant"></div>
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-error flex items-center justify-center ring-4 ring-surface-container-low shadow-[0_0_8px_rgba(255,180,171,0.4)]">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-error font-bold">02:17:00</span>
+<span class="font-code-xs text-code-xs text-outline font-medium">TELEMETRY INGRESS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">
+              Incident created by Perimeter Sensor #12 (Contact Break alert: Latch Reed Circuit Open &gt; 45s).
+            </p>
+<span class="font-code-xs text-code-xs text-secondary">Raw Packet: MSG_ID#9824_DOOR_LATCH_OPEN_UNAUTH</span>
+</div>
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-primary-container flex items-center justify-center ring-4 ring-surface-container-low shadow-[0_0_8px_#f97316]">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary-container font-bold">02:19:14</span>
+<span class="font-code-xs text-code-xs text-outline font-medium">TRIAGE &amp; VERIFICATION</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Acknowledged by Desk Officer <span class="text-on-surface font-semibold">M. Vance (#WS-842)</span>. High-definition PTZ Camera #14 aligned to target portal.
+            </p>
+<span class="font-code-xs text-code-xs text-tertiary">Dispatcher Note: "Visual confirms door ajar 1.5 inches. No intruders detected in frame."</span>
+</div>
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-secondary flex items-center justify-center ring-4 ring-surface-container-low shadow-[0_0_8px_#ffb95f]">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-secondary font-bold">02:22:30</span>
+<span class="font-code-xs text-code-xs text-outline font-medium">TACTICAL DISPATCH</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Dispatched Facilities Unit &amp; Security Patrol Unit 3 (Ofc. Henderson, Cruiser C-4) via encrypted tactical channel 4.
+            </p>
+</div>
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-secondary-container flex items-center justify-center ring-4 ring-surface-container-low shadow-[0_0_8px_#ee9800]">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-secondary font-bold">02:28:45</span>
+<span class="font-code-xs text-code-xs text-outline font-medium">PHYSICAL SECURING</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              On-site physical check: Latch obstruction (discarded packaging foam) cleared. Magnetic drop bolt engaged.
+            </p>
+<div class="mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">attachment</span>
+<span class="font-code-xs text-code-xs text-primary-container font-medium underline cursor-pointer">IMG_PROOF_20261025_022845.jpg (1.8 MB)</span>
+</div>
+</div>
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-tertiary flex items-center justify-center ring-4 ring-surface-container-low shadow-[0_0_8px_#4edea3]">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-tertiary font-bold">02:31:10</span>
+<span class="font-code-xs text-code-xs text-outline font-medium">CLOSED &amp; SEALED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold">
+              Incident formally resolved with verified photographic proof. Secure state re-established.
+            </p>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest border-t border-surface-variant/40 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">photo_camera</span>
+<span class="font-headline-sm text-[16px] font-bold text-on-surface">Verification Photographic Proof</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">ARCHIVED ATTACHMENTS (2)</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative rounded-lg overflow-hidden bg-surface-container border border-surface-variant/40 group h-28">
+<img class="w-full h-full object-cover" data-alt="High-resolution security patrol documentation photo of an exterior industrial security door latch showing removed foam obstruction under harsh inspection flashlight lighting at night, high clarity technical dark aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3DcE92WCkL5UeuUjJ4hljYIVgnfSfDs68Cp-eAoksqyWUUDXbBtFCCs4oXAPhnQbqknpXYRUzXEW4DsTIn9L8NUmTfPOhZ_4N_BfzILdB7JsH0WvxDfJ0qF3Fe_ZSAD9Rygur1B7KWp6XG_Y1RG_UheA_agiL0cr01_VLgmQwBAggJII5fUeG5EmIAOrTqr7CimCMLF_OZ7k5fA1uWgQv-CN9VHd5KiwAaPQNBwIO92WsFOjygAik0w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+<span class="font-code-xs text-code-xs text-on-surface tracking-tight font-medium">E-04 Obstruction Cleared</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden bg-surface-container border border-surface-variant/40 group h-28">
+<img class="w-full h-full object-cover" data-alt="Closed circuit camera capture showing an empty modern institutional corridor and locked security door with an activated green LED indicator, cool-toned dark security ops aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCfv0UpsS5GpY4ymSVt_U5V1GCyfKMxwfAm0j0TUsDqrIw-vguFP-x3EooRhd_G-S0zLVvrjh0qpKH2i6-Q1Rs3m08Avs4Dky4hca1xoaMLs7erk38Zym64A21QiLBgml_ajBDb5jsyywhbqOg3SukH2CLj5GTx8EOhr2ssm4et9ssGnNaTNoKvQSqVa6MWxANdBhArYox1dODNUCNjzZmI-GXtRz9Tdo0FLqU0Udz49ugLpFwvqQg0A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+<span class="font-code-xs text-code-xs text-on-surface tracking-tight font-medium">PTZ-14 Latch Secured Lock</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 border border-secondary/20 flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between text-outline font-code-xs text-code-xs">
+<span class="uppercase text-secondary font-bold">Digital Cryptographic Ledger Hash</span>
+<span class="text-primary-container font-bold">SHA-256 VERIFIED</span>
+</div>
+<div class="font-code-xs text-code-xs text-secondary-fixed font-medium break-all select-all bg-surface-container-lowest border border-surface-variant/50 p-1.5 rounded">
+            e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+          </div>
+<div class="flex items-center justify-between text-outline font-code-xs text-code-xs mt-0.5">
+<span>Signer: Demo University Central Operations Hub</span>
+<span class="text-on-surface-variant font-medium">Cert ID: DU-PUBKEY-9821</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

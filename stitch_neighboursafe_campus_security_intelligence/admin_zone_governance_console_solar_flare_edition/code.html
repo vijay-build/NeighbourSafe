@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed":"#ffddb8","surface-container-lowest":"#010f1f","on-secondary-fixed-variant":"#653e00","on-primary-fixed-variant":"#783200","on-secondary":"#472a00","on-tertiary":"#003824","surface-variant":"#273647","secondary-container":"#ee9800","surface-container":"#122131","secondary-fixed-dim":"#ffb95f","surface-container-highest":"#273647","error-container":"#93000a","primary-fixed":"#ffdbca","on-secondary-fixed":"#2a1700","on-background":"#d4e4fa","on-surface":"#d4e4fa","primary":"#ffb690","tertiary-container":"#00b07a","surface":"#051424","on-surface-variant":"#e0c0b1","surface-bright":"#2c3a4c","tertiary":"#4edea3","background":"#051424","on-error-container":"#ffdad6","surface-dim":"#051424","on-tertiary-fixed-variant":"#005236","on-tertiary-fixed":"#002113","on-secondary-container":"#5b3800","outline":"#a78b7d","on-error":"#690005","error":"#ffb4ab","primary-fixed-dim":"#ffb690","on-primary":"#552100","primary-container":"#f97316","surface-container-low":"#0d1c2d","secondary":"#ffb95f","inverse-surface":"#d4e4fa","outline-variant":"#584237","tertiary-fixed-dim":"#4edea3","surface-tint":"#ffb690","inverse-on-surface":"#233143","on-primary-container":"#582200","on-tertiary-container":"#003b26","surface-container-high":"#1c2b3c","on-primary-fixed":"#341100","inverse-primary":"#9d4300","tertiary-fixed":"#6ffbbe"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-desktop":"1.5rem","space-md":"1rem","space-sm":"0.5rem","gutter":"1rem","margin":"1rem","space-2xl":"4rem","space-lg":"1.5rem","margin-desktop":"2rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"display-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-lg":["Space Grotesk"],"label-md":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"display-lg-mobile":["Space Grotesk"],"label-lg":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"body-sm":["Space Grotesk"],"title-md":["Space Grotesk"],"headline-lg":["Space Grotesk"],"telemetry-num":["JetBrains Mono"],"body-md":["Space Grotesk"],"headline-md":["Space Grotesk"]},fontSize:{"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"500"}],"headline-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.05em",fontWeight:"500"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"title-md":["18px",{lineHeight:"24px",fontWeight:"500"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"600"}],"telemetry-num":["22px",{lineHeight:"26px",letterSpacing:"0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_1px_16px_rgba(0,0,0,0.7)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest border-b border-outline-variant/20"><div class="w-8 h-8 rounded-lg bg-primary-container/20 border border-primary-container/50 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px] text-primary">shield</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">NeighbourSafe</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Solar Sentinel Core</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="px-space-sm font-label-sm text-label-sm text-outline uppercase tracking-wider">Intelligence Operations</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-white font-medium shadow-[0_0_12px_rgba(249,115,22,0.35)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview-command" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-md text-body-md">Overview / Command</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="campus-map" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Campus Map</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="incidents" href="#"><span class="material-symbols-outlined text-[18px]">crisis_alert</span><span class="font-body-md text-body-md">Incidents</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="community-reports" href="#"><span class="material-symbols-outlined text-[18px]">record_voice_over</span><span class="font-body-md text-body-md">Community Reports</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-logs-history" href="#"><span class="material-symbols-outlined text-[18px]">history_edu</span><span class="font-body-md text-body-md">Audit Logs / History</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg bg-primary-container/20 text-primary border border-primary-container/30 font-medium" data-path="admin-governance" href="#"><span class="material-symbols-outlined text-[18px]">shield_person</span><span class="font-body-md text-body-md">Admin / Governance</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded-lg flex flex-col gap-space-xs border border-secondary-container/20"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">SOLAR AI DIRECTIVE</span><span class="material-symbols-outlined text-[15px] text-secondary">flare</span></div><p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">AI detects &amp; prioritises. Humans verify &amp; decide.</p></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.5)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm bg-surface-container-low border border-outline-variant/40 px-space-md py-space-xs rounded-lg cursor-pointer hover:border-primary/50 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">domain</span><span class="font-label-md text-label-md text-on-surface">North Metro Campus</span><span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span></div><div class="flex items-center gap-space-sm bg-surface-container-low border border-secondary/30 px-space-md py-space-xs rounded-full shadow-[0_0_8px_rgba(255,185,95,0.15)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-secondary font-medium tracking-wide uppercase">Solar Feeds (32 Nodes Active)</span></div></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-[18px] text-outline">search</span><input class="bg-surface-container-low border border-outline-variant/30 text-on-surface placeholder-outline font-body-sm text-body-sm pl-9 pr-space-xl py-space-xs rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-64 md:w-80 transition-all" placeholder="Search incidents, units, tags... (⌘K)" type="text"/><span class="absolute right-space-md font-label-sm text-label-sm text-outline bg-surface-container-high px-space-xs py-0.5 rounded border border-outline-variant/30">⌘K</span></div><div class="flex items-center gap-space-md"><button class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-md"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Ofc. M. Ramirez</span><span class="font-label-sm text-label-sm text-secondary leading-tight mt-1">Shift Supervisor #402</span></div><div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-bold flex items-center justify-center shadow-[0_0_10px_rgba(249,115,22,0.4)]"><span class="material-symbols-outlined text-[18px] text-surface-container-lowest">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="p-space-xl flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Top Action & Overview Title Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface-container-high border border-outline-variant/30 px-space-sm py-0.5 rounded-sm">Campus Governance • SEC-NODE-09</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/20 border border-secondary/40 px-space-sm py-0.5 rounded-sm flex items-center gap-1.5 shadow-[0_0_8px_rgba(255,185,95,0.2)]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            ACTIVE WATCH CYCLE #148 • SOLAR PEAK
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Admin &amp; Campus Governance</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage university security domains, user access clearance, zone classifications, and system compliance.</p>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-lg flex items-center gap-space-sm transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Security Key Vault</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-lg flex items-center gap-space-sm transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">badge</span>
+<span>+ Provision Officer Badge</span>
+</button>
+<button class="bg-gradient-to-r from-primary-container to-secondary-container hover:opacity-90 text-surface-container-lowest font-bold font-label-md text-label-md px-space-md py-space-sm rounded-lg flex items-center gap-space-sm transition-all shadow-[0_0_15px_rgba(249,115,22,0.4)]" type="button">
+<span class="material-symbols-outlined text-[16px]">add_location_alt</span>
+<span>+ Add New Campus Zone</span>
+</button>
+</div>
+</div>
+<!-- Ethical Campus Safety Directive Banner -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-md shadow-md relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-primary-container via-secondary to-primary"></div>
+<div class="flex items-center gap-space-md pl-space-xs">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/20 border border-secondary/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md font-semibold text-secondary uppercase tracking-wider">Ethical Campus Safety Mandate</span>
+<span class="font-label-sm text-label-sm bg-surface-container-high border border-outline-variant/30 text-primary px-space-xs py-0.5 rounded">DIRECTIVE-914-B</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            AI prioritisation threshold: Human-in-the-loop strict verification enforced for all Tier 1 dispatch directives. Automated access locks without dispatcher dual-key authorization are prohibited.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-auto">
+<div class="flex items-center gap-1.5 bg-secondary-container/20 border border-secondary/40 px-space-sm py-1 rounded-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">flare</span>
+<span class="font-label-sm text-label-sm font-semibold">Strict Guard Active</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded-sm transition-colors">
+          View Protocol Specs
+        </button>
+</div>
+</div>
+<!-- Top Stats Cards: Bento Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:border-primary/40 hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Enrolled Students</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">18,420</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high border border-primary-container/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Active ID Sync: 99.4%</span>
+</div>
+<!-- Micro Sparkline -->
+<svg class="w-20 h-5 text-secondary" fill="none" viewbox="0 0 100 25">
+<path d="M0 18 L15 15 L30 19 L45 10 L60 12 L75 6 L90 8 L100 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:border-secondary/40 hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Security Personnel</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">42</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high border border-secondary/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">On-Duty / Standby</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/20 border border-secondary/30 px-space-sm py-0.5 rounded text-secondary font-semibold">4 Patrol Units</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:border-primary/40 hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Monitored Zones</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">28</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high border border-primary-container/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-error bg-error-container/30 border border-error/30 px-space-xs py-0.5 rounded font-semibold">8 Restricted</span>
+<span class="text-secondary bg-secondary-container/20 border border-secondary/30 px-space-xs py-0.5 rounded font-semibold">4 Sensitive</span>
+<span class="text-on-surface-variant">16 Public/Ctrl</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:border-secondary/40 hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Compliance &amp; Clery</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">100%</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high border border-secondary/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lock</span> FERPA Strict Mode
+          </span>
+<span class="font-label-sm text-label-sm text-outline">Audited 12m ago</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace with Split Views / Tabs -->
+<div class="flex flex-col gap-space-lg">
+<!-- Custom Tab Controllers -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md bg-surface-container-lowest border border-outline-variant/30 p-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-surface-container-lowest font-bold font-label-md text-label-md transition-all shadow-[0_0_12px_rgba(249,115,22,0.35)]" id="tab-btn-zones" onclick="switchGovTab('zones')">
+<span class="material-symbols-outlined text-[16px]">domain_verification</span>
+<span>Campus Zone Management &amp; Access Rules</span>
+<span class="bg-surface-container-lowest/30 text-surface-container-lowest px-space-xs rounded font-label-sm text-label-sm ml-1">5</span>
+</button>
+<button class="tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" id="tab-btn-users" onclick="switchGovTab('users')">
+<span class="material-symbols-outlined text-[16px]">shield_person</span>
+<span>Security &amp; User Access Control</span>
+<span class="bg-surface-container px-space-xs rounded font-label-sm text-label-sm ml-1">4</span>
+</button>
+<button class="tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" id="tab-btn-audit" onclick="switchGovTab('audit')">
+<span class="material-symbols-outlined text-[16px]">rule_folder</span>
+<span>Compliance Integrity Mesh</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm px-space-sm w-full sm:w-auto justify-between sm:justify-end">
+<div class="flex items-center gap-space-xs bg-surface-container-high border border-outline-variant/30 px-space-sm py-1 rounded-md text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">filter_list</span>
+<span class="font-label-sm text-label-sm text-on-surface">Filter: All Buildings</span>
+</div>
+<button class="p-1 text-outline hover:text-primary hover:bg-surface-container-high rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- TAB 1: Campus Zone Management & Access Rules -->
+<section class="flex flex-col gap-space-md" id="panel-zones">
+<!-- Interactive Zone Matrix Card -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl shadow-md overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low border-b border-outline-variant/20 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#f97316] animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface tracking-tight">Active Campus Perimeter Grid</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Real-time hardware verification state, clearance tier overrides, and physical sensor bindings.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-highest border border-outline-variant/30 px-space-md py-1 rounded-lg text-on-surface font-label-sm text-label-sm">
+<span class="text-error font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-error"></span> 1 Alert</span>
+<span class="text-outline">•</span>
+<span class="text-secondary font-semibold">1 Maint</span>
+<span class="text-outline">•</span>
+<span class="text-primary font-semibold">3 Secure</span>
+</div>
+</div>
+</div>
+<!-- Zones Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider border-b border-outline-variant/30">
+<tr>
+<th class="py-space-md px-space-lg font-medium">Zone &amp; Facility Spec</th>
+<th class="py-space-md px-space-md font-medium">Building Complex</th>
+<th class="py-space-md px-space-md font-medium">Security Classification</th>
+<th class="py-space-md px-space-md font-medium">Access Rule &amp; Auth Schema</th>
+<th class="py-space-md px-space-md font-medium">Active Sensor Nodes</th>
+<th class="py-space-md px-space-md font-medium">Telemetry Status</th>
+<th class="py-space-md px-space-lg text-right font-medium">Governance Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20">
+<!-- Row 1: Exam Store Vault Annex (ALERT) -->
+<tr class="hover:bg-surface-container transition-colors bg-error-container/10 relative group border-l-2 border-l-error">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container/40 border border-error/40 text-error flex items-center justify-center shrink-0 shadow-[0_0_8px_rgba(255,180,171,0.2)]">
+<span class="material-symbols-outlined text-[18px]">priority_high</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Exam Store Vault Annex</span>
+<span class="font-label-sm text-label-sm text-outline">GEO-ZN: #ADM-401</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Admin Block</span>
+<span class="block font-label-sm text-label-sm text-outline">Sub-Basement B2</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-error text-on-error font-bold tracking-wider shadow-[0_0_8px_rgba(255,180,171,0.3)]">RESTRICTED</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">fingerprint</span>
+<span>Keycard + Biometric</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">Dual Custody Required</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-on-surface font-medium">4 CCTV • 2 Door Contacts</span>
+<span class="text-error flex items-center gap-1 mt-0.5 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> Contact #2 Open (Forced)
+                      </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-error text-on-error font-bold flex items-center gap-1 animate-pulse shadow-[0_0_8px_rgba(255,180,171,0.4)]">
+<span class="material-symbols-outlined text-[12px]">warning</span> ACTIVE ALERT
+                      </span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-mono block mt-1">#NS-INC-0024</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="bg-primary-container hover:bg-primary-container/85 text-surface-container-lowest font-bold font-label-sm text-label-sm px-space-sm py-1 rounded shadow-[0_0_10px_rgba(249,115,22,0.3)] transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span> View Telemetry
+                      </button>
+<button class="bg-surface-container-highest hover:bg-surface-bright border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded transition-all">
+                        Configure Access
+                      </button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Server Room & HVAC Hub -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Server Room &amp; HVAC Hub</span>
+<span class="font-label-sm text-label-sm text-outline">GEO-ZN: #IT-092</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Block C</span>
+<span class="block font-label-sm text-label-sm text-outline">Mezzanine Level</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container/20 border border-secondary/40 text-secondary font-semibold tracking-wider">SENSITIVE</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">encrypted</span>
+<span>Level 4 Clearance</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">Sysadmin + Facilities Token</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-on-surface font-medium">6 Multi-Spectral, Thermal</span>
+<span class="text-secondary">All telemetry within delta</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest border border-secondary/30 text-secondary font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> SECURE
+                    </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded transition-all">
+                      Configure Access
+                    </button>
+</td>
+</tr>
+<!-- Row 3: Main Campus Library -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/30 text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">local_library</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Main Campus Library</span>
+<span class="font-label-sm text-label-sm text-outline">GEO-ZN: #LIB-100</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Library Complex</span>
+<span class="block font-label-sm text-label-sm text-outline">Main Atrium &amp; Stacks</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest border border-outline-variant/40 text-on-surface-variant font-semibold tracking-wider">CONTROLLED</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">badge</span>
+<span>Student ID Swipes (24/7)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">Guest Escort Required Post-22:00</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-on-surface font-medium">18 Optical Panoramic</span>
+<span class="text-outline">Crowd Density: Normal (31%)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> NORMAL
+                    </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded transition-all">
+                      Configure Access
+                    </button>
+</td>
+</tr>
+<!-- Row 4: West Quad Pedestrian Lawn -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/30 text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">park</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">West Quad Pedestrian Lawn</span>
+<span class="font-label-sm text-label-sm text-outline">GEO-ZN: #OUT-014</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Outdoor Perimeter</span>
+<span class="block font-label-sm text-label-sm text-outline">West Campus Concourse</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container border border-outline-variant/30 text-outline font-semibold tracking-wider">PUBLIC</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">wb_sunny</span>
+<span>Solar Blue Light System</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">Autonomous Night Lux Mode</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-on-surface font-medium">8 Callboxes • 12 Luminaires</span>
+<span class="text-secondary font-medium">Solar Array Active (98%)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> NORMAL
+                    </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded transition-all">
+                      Configure Access
+                    </button>
+</td>
+</tr>
+<!-- Row 5: Hostel Wing B Entrance -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/20 border border-secondary/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Hostel Wing B Entrance</span>
+<span class="font-label-sm text-label-sm text-outline">GEO-ZN: #RES-218</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Residential Hostels</span>
+<span class="block font-label-sm text-label-sm text-outline">North Residence Gate</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest border border-outline-variant/40 text-on-surface-variant font-semibold tracking-wider">CONTROLLED</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">contactless</span>
+<span>Resident RFID Only</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">Automated Curfew 23:00-06:00</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-on-surface font-medium">4 Turnstile Gates • 8 Cameras</span>
+<span class="text-secondary font-medium">Turnstile 3 Latch Offline</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container/20 border border-secondary/30 text-secondary font-medium inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">construction</span> MAINTENANCE
+                    </span>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">Latch Check Scheduled</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded transition-all">
+                      Configure Access
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footnote & Paging Summary -->
+<div class="p-space-md bg-surface-container-lowest border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-md">
+<span>Showing 5 of 28 Active University Zones</span>
+<span class="text-outline-variant">•</span>
+<span>Hardware compliant with NIST FIPS 201 standard</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant">Telemetry refresh cycle: 2.4s</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary ml-1 shadow-[0_0_6px_#ffb95f]"></span>
+</div>
+</div>
+</div>
+<!-- Secondary Detail Split: Quick Zone Physical Security Map & Spatial Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Map Visualizer Preview -->
+<div class="lg:col-span-2 bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Campus Geo-Boundary Map (Sector A • Admin &amp; Science)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Synchronized with physical access control nodes and solar perimeter beacons.</p>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/20 border border-secondary/40 text-secondary px-space-sm py-1 rounded font-semibold">Live Solar GIS Lock</span>
+</div>
+<div class="w-full h-72 bg-cover bg-center rounded-lg relative overflow-hidden flex items-center justify-center border border-outline-variant/30 bg-[#071321]" data-location="Stanford University Campus, Stanford, CA">
+<!-- Solar Sentinel Grid pattern overlay -->
+<div class="absolute inset-0 bg-[radial-gradient(#f97316_0.75px,transparent_0.75px)] [background-size:16px_16px] opacity-20"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Map Overlays -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/95 border border-error/40 px-space-md py-space-sm rounded-lg shadow-lg flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Incident NS-INC-0024 Geo-Pin Active</span>
+</div>
+<!-- Interactive Pin Callouts -->
+<div class="absolute top-1/3 left-1/4 bg-surface-container-high/95 border border-error/40 p-space-xs rounded-lg shadow-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-error">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Vault Annex (Lockdown)</span>
+</div>
+<div class="absolute bottom-1/3 right-1/3 bg-surface-container-high/95 border border-secondary/40 p-space-xs rounded-lg shadow-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Patrol Unit Alpha-01</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-surface-container-lowest/90 border border-secondary/30 px-space-sm py-1 rounded text-secondary font-label-sm text-label-sm shadow-md">
+<span>Lat: 37.4275° N • Long: 122.1697° W</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> Tier 1 Restricted</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Sensitive Tier 2</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> Controlled Common</span>
+</div>
+<button class="text-primary hover:text-secondary hover:underline flex items-center gap-1 font-semibold transition-colors">
+                Open Fullscreen GIS Workspace <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Zone Security Audit Checklist -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Audit Compliance Shield</h3>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Automated hardware verification benchmarks for state security audits.</p>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Clery Act Geo-Fencing</span>
+<span class="font-label-sm text-label-sm text-outline">Real-time perimeter incident log</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">100% OK</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">lock_clock</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">FERPA Data Privacy Lock</span>
+<span class="font-label-sm text-label-sm text-outline">Student biometric encryption key v4</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">ENFORCED</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-secondary/30 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">history</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Hardware Tamper Loop</span>
+<span class="font-label-sm text-label-sm text-outline">Door strike sensor voltage</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">1 WARNING</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">emergency_share</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">911 Local Dispatch Relay</span>
+<span class="font-label-sm text-label-sm text-outline">County E911 API handshake</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">ONLINE</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20">
+<button class="w-full bg-surface-container-highest hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-md text-label-md py-space-sm rounded-lg transition-all flex items-center justify-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">file_download</span>
+<span>Generate Clery Compliance Dossier</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 2: Security & User Access Control -->
+<section class="flex flex-col gap-space-md" id="panel-users">
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl shadow-md overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low border-b border-outline-variant/20 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_#ffb95f]"></span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface tracking-tight">Personnel Clearance &amp; Officer Registry</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Role-based privileges, active spatial tracking, and digital cryptographic tokens for authorized personnel.</p>
+</div>
+<!-- Table Actions -->
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-sm top-2 text-[16px] text-outline">search</span>
+<input class="bg-surface-container-lowest border border-outline-variant/30 text-on-surface placeholder-outline font-body-sm text-body-sm pl-8 pr-space-md py-1 rounded-lg focus:outline-none focus:border-primary w-52 sm:w-64" placeholder="Filter by name, badge, role..." type="text"/>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-md text-label-md px-space-md py-1 rounded-lg transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">download</span> Export
+              </button>
+</div>
+</div>
+<!-- Personnel Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider border-b border-outline-variant/30">
+<tr>
+<th class="py-space-md px-space-lg font-medium">Security Professional</th>
+<th class="py-space-md px-space-md font-medium">Official University Email</th>
+<th class="py-space-md px-space-md font-medium">Designated Operational Role</th>
+<th class="py-space-md px-space-md font-medium">Clearance Authority Tier</th>
+<th class="py-space-md px-space-md font-medium">Current Operational Status</th>
+<th class="py-space-md px-space-lg text-right font-medium">Access Governance</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20">
+<!-- Person 1: Ofc. Marcus Vance -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container text-surface-container-lowest font-bold flex items-center justify-center font-label-sm text-label-sm shadow-[0_0_8px_rgba(249,115,22,0.4)]">
+                        MV
+                      </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Ofc. Marcus Vance</span>
+<span class="font-label-sm text-label-sm text-outline">Badge #OP-8821 • Lead Dispatch</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-mono">m.vance@demouni.edu</span>
+<span class="block font-label-sm text-label-sm text-secondary">FIDO2 Multi-Factor Verified</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Lead Watch Dispatcher</span>
+<span class="block font-label-sm text-label-sm text-outline">Emergency Command Desk</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container text-surface-container-lowest font-bold shadow-[0_0_8px_rgba(249,115,22,0.3)]">SECURITY OPS (TIER 1)</span>
+<span class="block font-label-sm text-label-sm text-outline mt-0.5">Override Rights: Full Campus</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-on-surface font-medium">Active at Desk 01</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Shift ends 08:00</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-md py-1 rounded transition-all">
+                      Edit Permissions
+                    </button>
+</td>
+</tr>
+<!-- Person 2: Ofc. Sarah Henderson -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high border border-secondary/40 text-secondary font-bold flex items-center justify-center font-label-sm text-label-sm">
+                        SH
+                      </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Ofc. Sarah Henderson</span>
+<span class="font-label-sm text-label-sm text-outline">Badge #PT-4402 • Mobile Unit</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-mono">s.henderson@demouni.edu</span>
+<span class="block font-label-sm text-label-sm text-secondary">Body-Cam #09 Active</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Patrol Unit Alpha Lead</span>
+<span class="block font-label-sm text-label-sm text-outline">Tactical Rapid Response</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest border border-secondary/30 text-secondary font-semibold">FIELD SECURITY (TIER 2)</span>
+<span class="block font-label-sm text-label-sm text-outline mt-0.5">Tactical Access: Zones 1-8</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-secondary font-medium">En Route Corridor E</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Responding to #NS-INC-0024</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-md py-1 rounded transition-all">
+                      Edit Permissions
+                    </button>
+</td>
+</tr>
+<!-- Person 3: Dr. Aris Thorne -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high border border-outline-variant/40 text-on-surface font-bold flex items-center justify-center font-label-sm text-label-sm">
+                        AT
+                      </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Dr. Aris Thorne</span>
+<span class="font-label-sm text-label-sm text-outline">Faculty ID #DIR-110</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-mono">a.thorne@demouni.edu</span>
+<span class="block font-label-sm text-label-sm text-outline">Hardware Key Authenticated</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Facilities &amp; Infrastructure Director</span>
+<span class="block font-label-sm text-label-sm text-outline">Physical Plant Administration</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container/20 border border-secondary/40 text-secondary font-semibold">CAMPUS ADMIN</span>
+<span class="block font-label-sm text-label-sm text-outline mt-0.5">Utility &amp; Plant Access Level 4</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="text-on-surface">Active (Engineering Hall)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Last badge swipe 34m ago</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-md py-1 rounded transition-all">
+                      Edit Permissions
+                    </button>
+</td>
+</tr>
+<!-- Person 4: Prof. Elena Vance -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high border border-outline-variant/40 text-on-surface-variant font-bold flex items-center justify-center font-label-sm text-label-sm">
+                        EV
+                      </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Prof. Elena Vance</span>
+<span class="font-label-sm text-label-sm text-outline">Faculty ID #SCI-004</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-mono">e.vance@demouni.edu</span>
+<span class="block font-label-sm text-label-sm text-outline">Institutional SSO Synced</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Dean of Sciences / Faculty</span>
+<span class="block font-label-sm text-label-sm text-outline">College of Natural Sciences</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest border border-outline-variant/40 text-on-surface-variant font-medium">STAFF ACCESS (ZONE 1-3)</span>
+<span class="block font-label-sm text-label-sm text-outline mt-0.5">Excludes Sub-Basement Vaults</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Authorized</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Academic Year 2024-2025</span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="bg-surface-container-high hover:bg-surface-variant border border-outline-variant/40 text-on-surface font-label-sm text-label-sm px-space-md py-1 rounded transition-all">
+                      Edit Permissions
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-lowest border-t border-outline-variant/20 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Privileged Accounts subject to automated quarterly re-certification.</span>
+<span class="text-primary hover:underline cursor-pointer">View Revocation Log • 0 Active Suspensions</span>
+</div>
+</div>
+<!-- Clearance Tier Architecture Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm hover:border-primary/40 transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold">Tier 1 • Command &amp; Vault</span>
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tactical Ops Clearance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Grants master override on door strikes, lockdown activations, and simulated training feeds.</p>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Active Bearers: 6</span>
+<span class="text-secondary font-medium">Dual YubiKey Required</span>
+</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm hover:border-secondary/40 transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Tier 2 • Field First-Responder</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">local_police</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Campus Police &amp; Patrol</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Grants perimeter access, blue light responder keys, student ID scan verification in field.</p>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Active Bearers: 36</span>
+<span class="text-on-surface font-medium">Body-Cam Association</span>
+</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-lg shadow-sm hover:border-outline-variant/60 transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-outline font-bold">Tier 3 • Academic &amp; Resident</span>
+<span class="material-symbols-outlined text-[18px] text-outline">badge</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Student &amp; Faculty Core</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Time-bounded entry based on class schedules, hostel allocation, and laboratory enrollment.</p>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Active Bearers: 19,410</span>
+<span class="text-on-surface font-medium">Auto-Revoke on Leave</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 3: Compliance Integrity Mesh (Hidden by default) -->
+<section class="hidden flex flex-col gap-space-md" id="panel-audit">
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-space-xl shadow-md flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">FERPA &amp; Clery Continuous Audit Mesh</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immutable cryptographic proof-of-transit for student location records and incident reports.</p>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/20 border border-secondary/40 px-space-md py-1 rounded text-secondary font-mono">SHA-256 HASH CHAIN: VERIFIED</span>
+</div>
+<!-- Micro Terminal Output of Integrity Chain -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-space-md rounded-lg font-label-sm text-label-sm space-y-1.5 text-on-surface-variant font-mono">
+<div class="text-outline">[2025-05-18T14:22:01Z] SOLAR AUDIT DAEMON: Node #04 integrity hash match: 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069</div>
+<div class="text-outline">[2025-05-18T14:22:04Z] POLICY ENGINE: Human-in-the-loop strict dispatch flag: PASSED (Zero unilateral autonomous lock triggers)</div>
+<div class="text-secondary">[2025-05-18T14:22:10Z] FERPA DIRECTIVE: Student ID anonymizer pipeline operating with k-anonymity factor (k=12)</div>
+<div class="text-outline">[2025-05-18T14:22:15Z] CLERY AUTOMATION: Daily crime log export compiled. 0 unresolved severe alerts outside 48h disclosure window.</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  function switchGovTab(tabName) {
+    const btnZones = document.getElementById('tab-btn-zones');
+    const btnUsers = document.getElementById('tab-btn-users');
+    const btnAudit = document.getElementById('tab-btn-audit');
+
+    const pZones = document.getElementById('panel-zones');
+    const pUsers = document.getElementById('panel-users');
+    const pAudit = document.getElementById('panel-audit');
+
+    [btnZones, btnUsers, btnAudit].forEach(btn => {
+      btn.className = 'tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all';
+    });
+
+    [pZones, pUsers, pAudit].forEach(panel => {
+      panel.classList.add('hidden');
+    });
+
+    if (tabName === 'zones') {
+      btnZones.className = 'tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-surface-container-lowest font-bold font-label-md text-label-md transition-all shadow-[0_0_12px_rgba(249,115,22,0.35)]';
+      pZones.classList.remove('hidden');
+    } else if (tabName === 'users') {
+      btnUsers.className = 'tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-surface-container-lowest font-bold font-label-md text-label-md transition-all shadow-[0_0_12px_rgba(249,115,22,0.35)]';
+      pUsers.classList.remove('hidden');
+    } else if (tabName === 'audit') {
+      btnAudit.className = 'tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-surface-container-lowest font-bold font-label-md text-label-md transition-all shadow-[0_0_12px_rgba(249,115,22,0.35)]';
+      pAudit.classList.remove('hidden');
+    }
+  }
+</script></main></div></body></html>

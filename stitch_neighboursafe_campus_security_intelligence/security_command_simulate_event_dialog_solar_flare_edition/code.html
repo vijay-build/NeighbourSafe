@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#ffddb8",
+          "surface-container-lowest": "#010f1f",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-primary-fixed-variant": "#783200",
+          "on-secondary": "#472a00",
+          "on-tertiary": "#003824",
+          "surface-variant": "#273647",
+          "secondary-container": "#ee9800",
+          "surface-container": "#122131",
+          "secondary-fixed-dim": "#ffb95f",
+          "surface-container-highest": "#273647",
+          "error-container": "#93000a",
+          "primary-fixed": "#ffdbca",
+          "on-secondary-fixed": "#2a1700",
+          "on-background": "#d4e4fa",
+          "on-surface": "#d4e4fa",
+          "primary": "#ffb690",
+          "tertiary-container": "#00b07a",
+          "surface": "#051424",
+          "on-surface-variant": "#e0c0b1",
+          "surface-bright": "#2c3a4c",
+          "tertiary": "#4edea3",
+          "background": "#051424",
+          "on-error-container": "#ffdad6",
+          "surface-dim": "#051424",
+          "on-tertiary-fixed-variant": "#005236",
+          "on-tertiary-fixed": "#002113",
+          "on-secondary-container": "#5b3800",
+          "outline": "#a78b7d",
+          "on-error": "#690005",
+          "error": "#ffb4ab",
+          "primary-fixed-dim": "#ffb690",
+          "on-primary": "#552100",
+          "primary-container": "#f97316",
+          "surface-container-low": "#0d1c2d",
+          "secondary": "#ffb95f",
+          "inverse-surface": "#d4e4fa",
+          "outline-variant": "#584237",
+          "tertiary-fixed-dim": "#4edea3",
+          "surface-tint": "#ffb690",
+          "inverse-on-surface": "#233143",
+          "on-primary-container": "#582200",
+          "on-tertiary-container": "#003b26",
+          "surface-container-high": "#1c2b3c",
+          "on-primary-fixed": "#341100",
+          "inverse-primary": "#9d4300",
+          "tertiary-fixed": "#6ffbbe"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-desktop": "1.5rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "gutter": "1rem",
+          "margin": "1rem",
+          "space-2xl": "4rem",
+          "space-lg": "1.5rem",
+          "margin-desktop": "2rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2.5rem"
+        },
+        "fontFamily": {
+          "display-lg": ["Space Grotesk"],
+          "headline-sm": ["Space Grotesk"],
+          "body-lg": ["Space Grotesk"],
+          "label-md": ["JetBrains Mono"],
+          "headline-lg-mobile": ["Space Grotesk"],
+          "display-lg-mobile": ["Space Grotesk"],
+          "label-lg": ["JetBrains Mono"],
+          "label-sm": ["JetBrains Mono"],
+          "body-sm": ["Space Grotesk"],
+          "title-md": ["Space Grotesk"],
+          "headline-lg": ["Space Grotesk"],
+          "telemetry-num": ["JetBrains Mono"],
+          "body-md": ["Space Grotesk"],
+          "headline-md": ["Space Grotesk"],
+          "code-xs": ["JetBrains Mono"],
+          "code-sm": ["JetBrains Mono"]
+        },
+        "fontSize": {
+          "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "500" }],
+          "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+          "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "500" }],
+          "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }],
+          "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "700" }],
+          "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "500" }],
+          "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }],
+          "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }],
+          "title-md": ["18px", { lineHeight: "24px", fontWeight: "500" }],
+          "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+          "telemetry-num": ["22px", { lineHeight: "26px", letterSpacing: "0.02em", fontWeight: "700" }],
+          "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+          "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+          "code-xs": ["10px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "500" }],
+          "code-sm": ["11px", { lineHeight: "16px", fontWeight: "400" }]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[0_1px_12px_rgba(0,0,0,0.7)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest border-b border-outline-variant/20"><div class="w-8 h-8 rounded bg-primary-container/20 border border-primary/40 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">local_fire_department</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">NeighbourSafe</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-mono">Solar Sentinel Core</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="px-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider font-mono">Intelligence Operations</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary font-medium"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline-variant/40" data-path="overview-command" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-md text-body-md">Overview / Command</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline-variant/40" data-path="campus-map" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Campus Map</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline-variant/40" data-path="incidents" href="#"><span class="material-symbols-outlined text-[18px]">crisis_alert</span><span class="font-body-md text-body-md">Incidents</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline-variant/40" data-path="community-reports" href="#"><span class="material-symbols-outlined text-[18px]">record_voice_over</span><span class="font-body-md text-body-md">Community Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline-variant/40" data-path="audit-logs-history" href="#"><span class="material-symbols-outlined text-[18px]">history_edu</span><span class="font-body-md text-body-md">Audit Logs / History</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all border border-transparent hover:border-outline-variant/40" data-path="admin-governance" href="#"><span class="material-symbols-outlined text-[18px]">shield_person</span><span class="font-body-md text-body-md">Admin / Governance</span></a></nav></div><div class="p-space-md bg-surface-container-low mx-space-md mb-space-md rounded border border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase font-mono tracking-wider">SOLAR ETHICAL MANDATE</span><span class="material-symbols-outlined text-[14px] text-secondary">policy</span></div><p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">AI detects &amp; prioritises. Humans verify &amp; decide.</p></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_2px_12px_rgba(0,0,0,0.5)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="w-7 h-7 rounded bg-primary-container/20 border border-primary/50 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[17px]">local_fire_department</span></div><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-1 rounded border border-outline-variant/40 cursor-pointer hover:bg-surface-container-high hover:border-primary/40 transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">domain</span><span class="font-label-md text-label-md text-on-surface">North Metro Campus</span><span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span></div><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-1 rounded-full border border-secondary/30"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-secondary font-semibold tracking-wide uppercase font-mono">Live Feeds (32 Nodes)</span></div></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-outline">search</span><input class="bg-surface-container-low text-on-surface placeholder-outline font-body-sm text-body-sm pl-9 pr-space-xl py-1 rounded border border-outline-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-64 md:w-80 transition-all" placeholder="Search incidents, units, tags... (⌘K)" type="text"/><span class="absolute right-2.5 font-label-sm text-label-sm text-outline bg-surface-container-high px-1.5 py-0.5 rounded font-mono border border-outline-variant/30">⌘K</span></div><div class="flex items-center gap-space-md"><button class="p-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative border border-transparent hover:border-outline-variant/40" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#f97316]"></span></button><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-md"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Ofc. M. Ramirez</span><span class="font-label-sm text-label-sm text-secondary font-mono leading-tight mt-1">Shift Supervisor #402</span></div><div class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center font-bold shadow-[0_0_12px_rgba(249,115,22,0.4)]"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface flex-1"><div class="flex flex-col w-full relative">
+<!-- BACKGROUND COMMAND OPERATIONS DESK (Recessed Operational Grid) -->
+<div class="w-full min-h-[calc(100vh-4rem)] p-space-lg flex flex-col gap-space-lg select-none opacity-35 filter blur-[2px] pointer-events-none transition-all duration-300">
+<!-- Top Utility Status Metric Bar -->
+<div class="grid grid-cols-4 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded border border-outline-variant/30 flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-mono">Active Threat Matrix</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">3 Monitored Zones</span>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary border border-outline-variant/30">
+<span class="material-symbols-outlined text-[22px]">radar</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded border border-outline-variant/30 flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-mono">Optical Nodes Online</span>
+<span class="font-headline-md text-headline-md text-secondary font-semibold mt-1">32 / 32 Connected</span>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary border border-outline-variant/30">
+<span class="material-symbols-outlined text-[22px]">videocam</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded border border-outline-variant/30 flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-mono">Mean Human Triage</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">18.4s SLA</span>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary-fixed-dim border border-outline-variant/30">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded border border-outline-variant/30 flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-mono">Ethical AI Validation</span>
+<span class="font-headline-md text-headline-md text-primary font-semibold mt-1">100% Audited</span>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary border border-outline-variant/30">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace Split -->
+<div class="grid grid-cols-12 gap-space-lg flex-1">
+<!-- Left: Queue & Feed -->
+<div class="col-span-4 bg-surface-container-low rounded border border-outline-variant/30 p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">view_list</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Live Incident Queue</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-outline font-mono border border-outline-variant/30">PRIORITY SORT</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Science Quad Access Gate #2</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">ID #INC-9402 • 4m ago</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-2 py-0.5 rounded uppercase font-mono">ATTENTION</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">East Lot EV Stall 04</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">ID #INC-9398 • 12m ago</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline bg-surface-container-high px-2 py-0.5 rounded uppercase font-mono">RESOLVED</span>
+</div>
+</div>
+</div>
+<!-- Right: Main Live Camera Canvas & Geospatial Grid -->
+<div class="col-span-8 bg-surface-container-low rounded border border-outline-variant/30 p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Primary Sector Telemetry — North Quad</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">38.9072° N, 77.0369° W</span>
+</div>
+<div class="relative w-full h-80 bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center border border-outline-variant/30">
+<img class="w-full h-full object-cover opacity-60" data-alt="Dark security control room surveillance camera feed of an empty university administrative building corridor at night with low-light tactical illumination and digital telemetry timestamp overlays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLxSLsO_ghxwzNdDZ45fwe9bxHPkbuiaAjNNxowTIYwItjvzdLRwV5XXiUOmVKniW-kU_pkYXNku66AZ9Oxe2z57IinQgZpT6qMKs1uf2bYDo-9wVIBrZQfpFGldfexfQBuWt8gakYe2uab98SgLKV3T7tL0zVnwPHZyVmpnTc1tjXNU7iS0v3panLAccO_RphMPvcMkDcYNNcGJH_air4uO85Hy9ivm95tjrSfyyezpoVl8AoFawagQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 border border-primary/40 px-2 py-1 rounded font-label-sm text-label-sm text-primary flex items-center gap-1 font-mono">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span> REC // CAM-ADM-01
+          </div>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE EVENT SIMULATION MODAL OVERLAY -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-surface-container-lowest/85 backdrop-blur-md transition-opacity" id="simulationModal">
+<div class="w-full max-w-4xl bg-surface-container-low rounded border border-outline-variant/50 shadow-[0_0_40px_rgba(0,0,0,0.8)] flex flex-col overflow-hidden relative max-h-[942px]">
+<!-- Solar Ember Header Accent Glow -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-container via-secondary to-primary shadow-[0_0_12px_#f97316]"></div>
+<!-- Modal Header -->
+<div class="px-space-lg pt-space-lg pb-space-md bg-surface-container flex items-start justify-between border-b border-outline-variant/30">
+<div class="flex items-start gap-space-md">
+<div class="w-11 h-11 rounded bg-surface-container-high border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_12px_rgba(249,115,22,0.2)] mt-0.5">
+<span class="material-symbols-outlined text-[24px]">science</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Simulate Campus Event / Incident Injection</h2>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/20 border border-secondary/40 px-2 py-0.5 rounded uppercase font-mono font-medium">SANDBOX TEST</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl mt-1 leading-relaxed">
+              Trigger a verified synthetic telemetry scenario to test dispatcher triage workflows, latency SLA, and AI prioritization confidence without altering real campus emergency services.
+            </p>
+</div>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors border border-outline-variant/30" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Scrollable Modal Body -->
+<div class="p-space-lg flex flex-col gap-space-lg overflow-y-auto max-h-[calc(88vh-140px)]">
+<!-- SECTION 1: Scenario Preset Selection -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5 font-mono">
+<span class="material-symbols-outlined text-[14px]">tune</span> 01. Select Synthetic Scenario Preset
+            </label>
+<span class="font-label-sm text-label-sm text-secondary font-mono">Synthetic Engine v4.1 Connected</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm" id="scenarioGrid">
+<!-- Preset 1: ACTIVE RESTRICTED AREA BREACH -->
+<div class="scenario-card p-space-md bg-surface-container-high rounded cursor-pointer transition-all border border-primary/60 shadow-[0_0_15px_rgba(249,115,22,0.15)] relative flex flex-col justify-between" data-preset="breach">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded-full bg-primary-container flex items-center justify-center shadow-[0_0_8px_#f97316]">
+<div class="w-1.5 h-1.5 rounded-full bg-on-primary"></div>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Restricted Area After-Hours Breach</span>
+</div>
+<span class="font-label-sm text-label-sm text-error bg-error-container/30 border border-error/40 px-1.5 py-0.5 rounded uppercase font-mono font-medium">HIGH PRIORITY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Simulates localized infrared motion &amp; optical silhouette match without access badge reconciliation in high-security store.
+              </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline bg-surface-container-lowest/80 border border-outline-variant/30 px-space-sm py-1 rounded font-mono">
+<span>NODE CAM-ADM-04</span>
+<span class="text-primary font-semibold">AI CONF: 94.2%</span>
+</div>
+</div>
+<!-- Preset 2: UNATTENDED PACKAGE -->
+<div class="scenario-card p-space-md bg-surface-container rounded cursor-pointer transition-all hover:bg-surface-container-high border border-outline-variant/30 relative flex flex-col justify-between" data-preset="package">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded-full bg-surface-variant flex items-center justify-center border border-outline-variant/40"></div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Unattended Package / Perimeter Anomaly</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary/15 border border-secondary/30 px-1.5 py-0.5 rounded uppercase font-mono font-medium">ATTENTION</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Static object dwell time alert (&gt;15m) alongside pedestrian pathway with simulated peer student community report flag.
+              </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline bg-surface-container-lowest/80 border border-outline-variant/30 px-space-sm py-1 rounded font-mono">
+<span>WEST QUAD PATH</span>
+<span class="text-secondary font-semibold">AI CONF: 78.5%</span>
+</div>
+</div>
+<!-- Preset 3: SERVER ROOM THERMAL SPIKE -->
+<div class="scenario-card p-space-md bg-surface-container rounded cursor-pointer transition-all hover:bg-surface-container-high border border-outline-variant/30 relative flex flex-col justify-between" data-preset="server">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded-full bg-surface-variant flex items-center justify-center border border-outline-variant/40"></div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Server Core Thermal &amp; Access Spike</span>
+</div>
+<span class="font-label-sm text-label-sm text-error bg-error-container/50 border border-error/50 px-1.5 py-0.5 rounded uppercase font-mono font-bold tracking-wide">CRITICAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Telemetry alert simulating multi-sensor thermal rise (+14°C delta) paired with unauthenticated biometric keypad reject.
+              </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline bg-surface-container-lowest/80 border border-outline-variant/30 px-space-sm py-1 rounded font-mono">
+<span>BLOCK C CORE</span>
+<span class="text-error font-semibold">AI CONF: 98.1%</span>
+</div>
+</div>
+<!-- Preset 4: CUSTOM BUILDER -->
+<div class="scenario-card p-space-md bg-surface-container rounded cursor-pointer transition-all hover:bg-surface-container-high border border-outline-variant/30 relative flex flex-col justify-between" data-preset="custom">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-4 h-4 rounded-full bg-surface-variant flex items-center justify-center border border-outline-variant/40"></div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Custom Scenario Builder</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline bg-surface-container px-1.5 py-0.5 rounded uppercase font-mono font-medium border border-outline-variant/30">MANUAL SPEC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Define geographic perimeter polygon, custom sensor vector overrides, synthetic telemetry delay, and mock audio signals.
+              </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline bg-surface-container-lowest/80 border border-outline-variant/30 px-space-sm py-1 rounded font-mono">
+<span>CUSTOM CLUSTERS</span>
+<span class="text-primary font-semibold">USER DEFINED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Target Parameters & Injected Telemetry Vectors -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- Parameter Details -->
+<div class="col-span-7 bg-surface-container rounded border border-outline-variant/30 p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5 font-mono">
+<span class="material-symbols-outlined text-[15px]">settings_ethernet</span> 02. Injected Scenario Parameters
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-mono font-medium">TEST SECTOR 02-B</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="bg-surface-container-lowest p-space-sm rounded border border-outline-variant/20 flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-mono">Target Zone</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Exam Store — Admin L2</span>
+<span class="font-label-sm text-label-sm text-error mt-0.5 font-mono">Restricted Access (Keycard III)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded border border-outline-variant/20 flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-mono">Simulated Feed</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">CAM-ADM-04</span>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5 font-mono">Optical 1080p • 30 FPS Low-Light</span>
+</div>
+</div>
+<!-- Injected Anomaly Payload Vector -->
+<div class="bg-surface-container-lowest p-space-sm rounded border border-outline-variant/20 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-mono">Injected Vector Payload</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">TIMESTAMP: 23:58:12 UTC+1</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-mono leading-snug">
+                Silhouette movement detected across restricted threshold [X:342, Y:780]. Card reader ledger empty (No corresponding RF beacon registered within 120s buffer).
+              </p>
+</div>
+<!-- Ethical AI Directive Verification Box -->
+<div class="bg-surface-container-high p-space-sm rounded border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Ethical AI Model v3.9 Mandate</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Human Verification Mandatory before external dispatch</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-container/20 border border-primary/40 px-2 py-0.5 rounded font-mono font-semibold uppercase">ACTIVE RULE</span>
+</div>
+<!-- Mandatory Watermarking Assurance -->
+<div class="bg-secondary/10 border border-secondary/30 p-space-sm rounded flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
+<p class="font-label-sm text-label-sm text-secondary font-mono leading-normal">
+                Enforce mandatory <strong class="uppercase">[SIMULATED EVENT — NON-LIVE]</strong> banner on all downstream telemetry monitors and event ledgers.
+              </p>
+</div>
+</div>
+<!-- Simulation Dispatch Targets & Verification Terminal -->
+<div class="col-span-5 flex flex-col gap-space-md">
+<!-- Simulated Video Preview Mock -->
+<div class="bg-surface-container rounded border border-outline-variant/30 p-space-md flex flex-col gap-space-sm shadow-sm flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-mono">Feed Injection Canvas</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-mono font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span> TEST FEED READY
+                </span>
+</div>
+<div class="relative w-full h-28 bg-surface-container-lowest rounded border border-outline-variant/30 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High contrast surveillance view of locked campus archive doorway with amber simulation safety overlay markers and tactical bounding box." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKngt_MQ_X0biR36L0E8aDnzRoPgt91MzpDjFuNR3zRA3CC_g6c3y3hg7G1sU-uw81UrhIx016zxLXllOeYdEMRXoDMWaDAvySQi35oIeIwxpiL3IP_r-O7CaKH87n7pSkVPnzY6H_I9zhqFHjT5yUm0YF3BKcWLDToVwlA_VMlZsOCv-LHjvZAK02z1CrYBuEL2aCZNkm10WAVXAOOtvJQoazm9AHBv5opF4gZkmjWREUnMgBJdpemg"/>
+<!-- Watermark Overlay -->
+<div class="absolute inset-0 bg-surface-container-lowest/50 flex items-center justify-center p-2 text-center">
+<div class="bg-surface-container-lowest/95 border border-secondary/50 px-3 py-1 rounded shadow-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">warning</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono font-bold tracking-wider uppercase">SIMULATED SCENARIO</span>
+</div>
+</div>
+<div class="absolute bottom-1 right-2 font-label-sm text-label-sm text-on-surface-variant font-mono">
+                  RES: 1920x1080
+                </div>
+</div>
+<!-- Dispatch Targets Selection -->
+<div class="flex flex-col gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-mono">Target Dispatch Unit</span>
+<div class="p-space-xs bg-surface-container-lowest rounded border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">desktop_windows</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Console WS-842</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Officer Marcus Vance</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high border border-secondary/30 px-1.5 py-0.5 rounded font-mono">ONLINE</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_police</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Patrol Unit Alpha</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Mobile Terminal • Sector North</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">ETA 3m 40s</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Latency SLA & Simulation Telemetry Pipeline Bar -->
+<div class="bg-surface-container p-space-md rounded border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">network_check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Synthetic Pipeline Latency Benchmark</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">14ms Engine RTT</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dispatcher SLA threshold set to 30.0s max verification response.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg w-full md:w-auto justify-end">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-outline uppercase font-mono">ESTIMATED AI SCORE</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">94.2%</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/40 hidden md:block"></div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-outline uppercase font-mono">AUDIT HASH LOG</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">#0x8F94...2DE1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Action Bar & Statutory Safe Harbor Notice -->
+<div class="px-space-lg py-space-md bg-surface-container border-t border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Safety & Compliance Legal Notice -->
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">verified_user</span>
+<p class="font-label-sm text-label-sm text-outline leading-tight font-mono">
+            All simulated events are cryptographically isolated with SHA-256 test hashes and excluded from statutory Clery Act reporting.
+          </p>
+</div>
+<!-- Action Trigger Buttons -->
+<div class="flex items-center gap-space-md w-full md:w-auto justify-end">
+<button class="px-space-md py-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-label-md text-label-md border border-outline-variant/30 transition-colors" id="cancelSimulationBtn" type="button">
+            Cancel / Dismiss
+          </button>
+<button class="px-space-lg py-1.5 rounded bg-primary-container hover:bg-secondary-container text-on-primary font-label-md text-label-md font-semibold flex items-center gap-space-sm shadow-[0_0_22px_rgba(249,115,22,0.45)] hover:shadow-[0_0_30px_rgba(249,115,22,0.7)] transition-all border border-primary/50" id="triggerSimulationBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Trigger Live Simulation Stream</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification Simulator (Hidden by default, shown upon trigger) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="simToast">
+<div class="bg-surface-container-highest border border-primary/40 p-space-md rounded shadow-[0_0_30px_rgba(0,0,0,0.8)] flex items-center gap-space-md max-w-md">
+<div class="w-9 h-9 rounded bg-primary-container/20 border border-primary/40 text-primary flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(249,115,22,0.3)]">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-2">
+          Synthetic Incident Injected Successfully
+          <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/20 border border-secondary/40 px-1 rounded uppercase font-mono">SIM-LIVE</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">CAM-ADM-04 triage feed assigned to Desk Console WS-842. SLA timer active.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // INTERACTIVE BEHAVIORS FOR SCENARIO SELECTION & MODAL TRIGGER
+  document.addEventListener('DOMContentLoaded', () => {
+    const scenarioCards = document.querySelectorAll('.scenario-card');
+    const triggerBtn = document.getElementById('triggerSimulationBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const cancelBtn = document.getElementById('cancelSimulationBtn');
+    const modal = document.getElementById('simulationModal');
+    const toast = document.getElementById('simToast');
+
+    // Preset Selection Toggle
+    scenarioCards.forEach(card => {
+      card.addEventListener('click', () => {
+        scenarioCards.forEach(c => {
+          c.classList.remove('bg-surface-container-high', 'border-primary/60', 'shadow-[0_0_15px_rgba(249,115,22,0.15)]');
+          c.classList.add('bg-surface-container', 'border-outline-variant/30');
+          const indicator = c.querySelector('.w-4.h-4');
+          if (indicator) {
+            indicator.className = 'w-4 h-4 rounded-full bg-surface-variant flex items-center justify-center border border-outline-variant/40';
+            indicator.innerHTML = '';
+          }
+        });
+
+        card.classList.remove('bg-surface-container', 'border-outline-variant/30');
+        card.classList.add('bg-surface-container-high', 'border-primary/60', 'shadow-[0_0_15px_rgba(249,115,22,0.15)]');
+        const activeIndicator = card.querySelector('.w-4.h-4');
+        if (activeIndicator) {
+          activeIndicator.className = 'w-4 h-4 rounded-full bg-primary-container flex items-center justify-center shadow-[0_0_8px_#f97316]';
+          activeIndicator.innerHTML = '<div class="w-1.5 h-1.5 rounded-full bg-on-primary"></div>';
+        }
+      });
+    });
+
+    // Dismiss Modal Handlers
+    const dismissModal = () => {
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 250);
+    };
+
+    closeBtn.addEventListener('click', dismissModal);
+    cancelBtn.addEventListener('click', dismissModal);
+
+    // Trigger Simulation Stream Execution
+    triggerBtn.addEventListener('click', () => {
+      triggerBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] animate-spin">sync</span>
+        <span>Injecting Telemetry Vector...</span>
+      `;
+      triggerBtn.classList.add('opacity-80', 'cursor-not-allowed');
+
+      setTimeout(() => {
+        dismissModal();
+
+        // Show Toast Notification
+        toast.classList.remove('translate-y-24', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        setTimeout(() => {
+          toast.classList.add('translate-y-24', 'opacity-0');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 5000);
+      }, 1000);
+    });
+  });
+</script></main></div></body></html>

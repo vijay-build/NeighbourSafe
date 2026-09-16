@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-dim": "#051424",
+          "secondary-container": "#ee9800",
+          "inverse-on-surface": "#233143",
+          "on-error-container": "#ffdad6",
+          "on-primary-container": "#582200",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-tertiary": "#003824",
+          "tertiary-fixed": "#6ffbbe",
+          "outline": "#a78b7d",
+          "on-tertiary-fixed-variant": "#005236",
+          "surface-bright": "#2c3a4c",
+          "surface-container-highest": "#273647",
+          "tertiary-container": "#00b07a",
+          "error": "#ef4444",
+          "on-tertiary-container": "#003b26",
+          "primary-container": "#f97316",
+          "surface-container-high": "#1c2b3c",
+          "on-tertiary-fixed": "#002113",
+          "surface": "#051424",
+          "on-background": "#d4e4fa",
+          "on-secondary-fixed": "#2a1700",
+          "on-primary-fixed-variant": "#783200",
+          "surface-container-low": "#0d1c2d",
+          "on-primary": "#ffffff",
+          "background": "#051424",
+          "inverse-surface": "#d4e4fa",
+          "primary": "#ffb690",
+          "surface-container-lowest": "#010f1f",
+          "tertiary": "#ffb95f",
+          "surface-tint": "#ffb690",
+          "secondary": "#ffb95f",
+          "secondary-fixed-dim": "#ffb95f",
+          "primary-fixed-dim": "#ffb690",
+          "inverse-primary": "#ea580c",
+          "surface-variant": "#273647",
+          "on-secondary": "#472a00",
+          "outline-variant": "#584237",
+          "on-secondary-container": "#5b3800",
+          "on-surface": "#d4e4fa",
+          "secondary-fixed": "#ffddb8",
+          "on-surface-variant": "#e0c0b1",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-error": "#690005",
+          "error-container": "#93000a",
+          "surface-container": "#122131",
+          "primary-fixed": "#ffdbca",
+          "on-primary-fixed": "#341100"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "gutter": "1rem",
+          "margin-desktop": "2rem",
+          "space-xl": "2.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "space-2xl": "4rem",
+          "space-sm": "0.5rem",
+          "margin": "1rem",
+          "gutter-desktop": "1.5rem"
+        },
+        "fontFamily": {
+          "label-sm": [
+            "Geist"
+          ],
+          "body-sm": [
+            "Geist"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ],
+          "code-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-sm": [
+            "Space Grotesk"
+          ],
+          "code-xs": [
+            "JetBrains Mono"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "display-xl": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Geist"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "label-md": [
+            "Geist"
+          ],
+          "body-lg": [
+            "Geist"
+          ]
+        },
+        "fontSize": {
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "code-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "500"
+            }
+          ],
+          "code-xs": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-xl": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-[#051424] font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-[#010f1f] border-r border-[#584237]/40 z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="flex flex-col"><div class="h-14 px-space-md flex items-center gap-space-sm bg-[#0d1c2d]/70 border-b border-[#584237]/30"><img alt="Brand logo. - Primary color: #f97316
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VHjsEZ3VlGCWesBFIWRkmdKO6uHewYDUKn_aLv7mBfATBEt80Gmu0jss1rxMrhbEtCiqv5PyW1aIa2ztu1pCWRDs2X9BuTvy_KQbKM3JNdg2JadKkiloR4aX-oEhSov_AAGj5sUhSDAwMB4fhxhJ9gca64fiXT01dq0Pf_9zfYO_ZwxUpIwwbNbL9NbFMJU9Q9I96goytvkNMvixWt-imlMlQxsbtxpbgB65zVupqJ3UwHOON3Vuw_8I4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">NeighbourSafe</span><div class="flex items-center gap-space-xs mt-0.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_rgba(249,115,22,0.8)]"></span><span class="font-code-xs text-code-xs text-[#a78b7d] uppercase tracking-wider">SOLAR OPS v2.4</span></div></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-code-xs text-code-xs text-outline uppercase tracking-widest">Operations Command</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-white font-semibold rounded-lg shadow-[0_0_16px_rgba(249,115,22,0.45)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2 transition-all bg-primary-container text-white font-semibold rounded-lg shadow-[0_0_16px_rgba(249,115,22,0.45)] border border-[#ffb690]/30" data-path="security-command" href="#"><span class="material-symbols-outlined text-[18px] text-white">shield</span><span class="font-body-md text-body-md">Overview / Command</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="campus-map" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Campus Map</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="incidents" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">warning</span><span class="font-body-md text-body-md">Incidents</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-error font-code-xs text-code-xs font-bold border border-error/40">3 ACT</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="community-reports" href="#"><span class="material-symbols-outlined text-[18px]">forum</span><span class="font-body-md text-body-md">Community Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">history_edu</span><span class="font-body-md text-body-md">Audit Logs / History</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin-governance" href="#"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span class="font-body-md text-body-md">Admin / Governance</span></a></nav></div><div class="p-space-sm m-space-sm rounded-lg bg-[#0d1c2d] border border-[#584237]/40"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="relative flex-shrink-0"><div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/40 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">security</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-[#010f1f]"></span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate">Ofc. Marcus Vance</span><span class="font-code-xs text-code-xs text-outline truncate">#WS-842 • Desk 01</span></div></div><div class="flex items-center"><button class="p-1 text-on-surface-variant hover:text-primary transition-colors" title="Duty Settings" type="button"><span class="material-symbols-outlined text-[18px]">tune</span></button></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-[#010f1f]/95 backdrop-blur-xl z-40 px-gutter border-b border-[#584237]/40 shadow-[0_1px_8px_rgba(0,0,0,0.5)] flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">apartment</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Demo University — Main Campus</span></div><div class="h-4 w-px bg-surface-variant"></div><div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high border border-secondary/30"><span class="inline-block w-2 h-2 rounded-full bg-secondary-container shadow-[0_0_6px_rgba(238,152,0,0.8)] animate-pulse"></span><span class="font-code-xs text-code-xs text-secondary tracking-wider uppercase font-semibold">SOLAR FEED SYNC</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-outline text-[16px]">search</span><input class="h-8 pl-8 pr-12 w-64 bg-[#010f1f] text-on-surface placeholder-outline font-body-sm text-body-sm rounded-lg border border-[#584237]/40 focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search incidents, units, cameras..." type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-high text-outline font-code-xs text-code-xs border border-[#584237]/30">⌘K</kbd></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-low border border-[#584237]/30 text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">radar</span><span class="font-code-xs text-code-xs text-on-surface-variant uppercase">All 8 Zones Active</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-low border border-[#584237]/30 text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">radio</span><span class="font-code-xs text-code-xs text-on-surface">Ch 4 • Patrol Secure</span></div><button class="h-8 px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-variant border border-secondary/40 text-secondary font-code-xs text-code-xs uppercase flex items-center gap-1 transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[14px]">experiment</span>Simulate Event</button><div class="relative"><button class="p-1.5 text-on-surface-variant hover:text-on-surface relative rounded hover:bg-surface-container-high transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-[#010f1f] shadow-[0_0_6px_rgba(239,68,68,0.8)]"></span></button></div><div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center shadow-[0_0_8px_rgba(249,115,22,0.5)]"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div></header><main class="w-full pt-14 px-gutter bg-[#051424] min-h-screen"><div class="flex flex-col w-full gap-space-lg pb-space-xl">
+<!-- TOP HEADER & COMMAND CONTROLS -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-[#0d1c2d] border border-primary-container/40 text-primary font-code-xs text-code-xs uppercase tracking-wider">Operational Console</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-code-xs text-code-xs text-outline">SEC-OPS-DESK // TIER-1</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Security Command</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Monitor incidents in real time and focus operational attention on high-priority signals.
+      </p>
+</div>
+<!-- Right Controls & Telemetry -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="hidden sm:flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-[#0d1c2d] border border-[#584237]/40 text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+<span class="font-code-xs text-code-xs tracking-tight">
+          System Clock: <span class="text-on-surface font-semibold" id="clock">02:24:18 UTC+1</span>
+<span class="text-outline mx-1">•</span>
+          SLA Target: <span class="text-secondary font-medium">&lt; 3 min</span>
+</span>
+</div>
+<button class="h-9 px-space-md rounded-lg bg-[#122131] hover:bg-[#1c2b3c] border border-[#584237]/40 text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">filter_list</span>
+        Filter Stream
+      </button>
+<button class="h-9 px-space-md rounded-lg bg-primary-container hover:bg-inverse-primary text-white font-label-md text-label-md font-medium flex items-center gap-1.5 transition-all shadow-[0_0_18px_rgba(249,115,22,0.45)] border border-[#ffb690]/30" type="button">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+        + Simulate Event
+      </button>
+</div>
+</div>
+<!-- STAT METRIC CARDS (4 CARDS) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Active Incidents -->
+<div class="relative overflow-hidden rounded-xl bg-[#0d1c2d] border border-[#584237]/40 p-space-md shadow-md flex flex-col justify-between group hover:border-primary/50 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Active Incidents</span>
+<span class="font-display-xl text-display-xl text-on-surface leading-none mt-1">4</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-[#1c2b3c] border border-primary/30 flex items-center justify-center text-primary shadow-[0_0_8px_rgba(249,115,22,0.2)]">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-code-xs text-code-xs text-on-surface-variant">
+<span>2 pending human triage</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-medium border border-primary/30">+1 last hr</span>
+</div>
+<div class="absolute left-0 bottom-0 top-0 w-1 bg-primary-container shadow-[0_0_8px_rgba(249,115,22,0.6)]"></div>
+</div>
+<!-- Critical Priority -->
+<div class="relative overflow-hidden rounded-xl bg-[#0d1c2d] border border-error/40 p-space-md shadow-md flex flex-col justify-between group hover:border-error transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider font-semibold">Critical Priority</span>
+<span class="w-2 h-2 rounded-full bg-error animate-pulse shadow-[0_0_6px_rgba(239,68,68,0.9)]"></span>
+</div>
+<span class="font-display-xl text-display-xl text-error leading-none mt-1">1</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-error-container/40 border border-error/50 flex items-center justify-center text-error shadow-[0_0_10px_rgba(239,68,68,0.3)]">
+<span class="material-symbols-outlined text-[20px]">fmd_bad</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-code-xs text-code-xs text-on-surface-variant">
+<span class="text-error font-medium">Immediate attention required</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-error font-semibold border border-error/40">42s SLA rem</span>
+</div>
+<div class="absolute left-0 bottom-0 top-0 w-1 bg-error shadow-[0_0_10px_rgba(239,68,68,0.8)]"></div>
+</div>
+<!-- High Priority -->
+<div class="relative overflow-hidden rounded-xl bg-[#0d1c2d] border border-[#584237]/40 p-space-md shadow-md flex flex-col justify-between group hover:border-secondary/60 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">High Priority</span>
+<span class="font-display-xl text-display-xl text-secondary leading-none mt-1">2</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-[#ee9800]/20 border border-secondary/40 flex items-center justify-center text-secondary shadow-[0_0_8px_rgba(255,185,95,0.3)]">
+<span class="material-symbols-outlined text-[20px]">priority_high</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-code-xs text-code-xs text-on-surface-variant">
+<span>Under watch review</span>
+<span class="text-outline truncate">Exam Store &amp; Admin</span>
+</div>
+<div class="absolute left-0 bottom-0 top-0 w-1 bg-secondary shadow-[0_0_8px_rgba(255,185,95,0.6)]"></div>
+</div>
+<!-- Community Reports -->
+<div class="relative overflow-hidden rounded-xl bg-[#0d1c2d] border border-[#584237]/40 p-space-md shadow-md flex flex-col justify-between group hover:border-secondary/50 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Community Reports</span>
+<span class="font-display-xl text-display-xl text-on-surface leading-none mt-1">14</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-primary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-code-xs text-code-xs text-on-surface-variant">
+<span>1 pending review</span>
+<span class="text-secondary font-medium">13 resolved / verified</span>
+</div>
+<div class="absolute left-0 bottom-0 top-0 w-1 bg-secondary-container"></div>
+</div>
+</div>
+<!-- MAIN OPERATIONAL SPLIT GRID (60% Map / 40% Incidents) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: LIVE OPERATIONAL CAMPUS MAP OVERVIEW (7 cols = ~58%) -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="rounded-xl bg-[#0d1c2d] border border-[#584237]/50 overflow-hidden shadow-xl">
+<!-- Map Card Header -->
+<div class="px-space-md py-space-sm bg-[#010f1f] border-b border-[#584237]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">satellite_alt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Demo University — Live Spatial Overview</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">Real-time telemetry overlay • Coordinate Grid UTM-32N [SOLAR-SENTINEL]</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-xs text-code-xs text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_rgba(255,185,95,0.8)] animate-ping"></span>
+<span>32 Cameras Active</span>
+<span class="text-outline">•</span>
+<span class="text-secondary font-medium">14 Beacons Online</span>
+</div>
+</div>
+<!-- Zone Filters Bar -->
+<div class="px-space-md py-2 bg-[#0d1c2d] border-b border-[#584237]/30 flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5 overflow-x-auto">
+<button class="px-2.5 py-1 rounded bg-primary-container text-white font-code-xs text-code-xs uppercase font-medium shadow-[0_0_10px_rgba(249,115,22,0.4)]" type="button">All Zones</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-variant border border-[#584237]/30 text-on-surface-variant hover:text-on-surface font-code-xs text-code-xs uppercase transition-colors" type="button">Public (3)</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-variant border border-[#584237]/30 text-on-surface-variant hover:text-on-surface font-code-xs text-code-xs uppercase transition-colors" type="button">Controlled (2)</button>
+<button class="px-2.5 py-1 rounded bg-error-container/40 border border-error/50 text-error font-code-xs text-code-xs uppercase flex items-center gap-1 font-medium shadow-[0_0_8px_rgba(239,68,68,0.25)]" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Restricted (1 Alert)
+            </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high hover:bg-surface-variant border border-[#584237]/30 text-on-surface-variant hover:text-on-surface font-code-xs text-code-xs uppercase transition-colors" type="button">Sensitive</button>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">visibility</span>
+<span>Layers (4/4)</span>
+</div>
+</div>
+<!-- Vector Map Surface -->
+<div class="relative w-full h-[520px] bg-[#06090e] overflow-hidden select-none">
+<!-- Amber-tinted Subtle Grid Canvas -->
+<div class="absolute inset-0 bg-[radial-gradient(rgba(249,115,22,0.18)_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none"></div>
+<!-- Stylized Architectural SVG Blueprint with Amber & Warm Lines -->
+<svg class="w-full h-full" fill="none" viewbox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+<!-- Amber radar concentric rings subtly centered -->
+<circle cx="430" cy="300" fill="none" r="140" stroke="#f97316" stroke-opacity="0.08" stroke-width="1"></circle>
+<circle cx="430" cy="300" fill="none" r="260" stroke="#f97316" stroke-opacity="0.05" stroke-width="1"></circle>
+<circle cx="430" cy="300" fill="none" r="380" stroke="#f97316" stroke-opacity="0.03" stroke-width="1"></circle>
+<!-- Roadways & Campus Pathways -->
+<path d="M 0 310 L 900 310" stroke="#141b27" stroke-linecap="round" stroke-width="32"></path>
+<path d="M 430 0 L 430 600" stroke="#141b27" stroke-linecap="round" stroke-width="26"></path>
+<path d="M 120 180 L 760 480" stroke="#1c2b3c" stroke-dasharray="6 6" stroke-width="14"></path>
+<!-- Campus Perimeter Ring -->
+<rect fill="none" height="520" rx="16" stroke="#584237" stroke-opacity="0.4" stroke-width="1.5" width="820" x="40" y="40"></rect>
+<text fill="#a78b7d" font-family="JetBrains Mono" font-size="10" letter-spacing="2" x="56" y="70">SECTOR PERIMETER ALPHA // 52.3411 N, 0.1232 W [SOLAR GRID]</text>
+<!-- Patrol Route line: Guard Unit 2 to Admin Block (Glowing Amber Pulse) -->
+<path class="animate-pulse" d="M 430 310 L 430 200 L 590 190" filter="drop-shadow(0 0 4px #f97316)" opacity="0.95" stroke="#f97316" stroke-dasharray="4 4" stroke-width="2.5"></path>
+<!-- Building Blocks -->
+<!-- Block C (Server Room) - RESTRICTED ZONE (Crimson) -->
+<g class="transition-transform hover:opacity-90 cursor-pointer">
+<rect fill="#0e141f" height="150" rx="8" stroke="#ef4444" stroke-opacity="0.5" stroke-width="1.5" width="190" x="620" y="80"></rect>
+<rect fill="#93000a" fill-opacity="0.2" height="146" rx="6" width="186" x="622" y="82"></rect>
+<text fill="#ef4444" font-family="Space Grotesk" font-size="14" font-weight="600" x="635" y="110">Server Room · Block C</text>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" opacity="0.85" x="635" y="128">ZONE: RESTRICTED // TIER-4</text>
+<!-- Server Racks vector silhouette -->
+<rect fill="#1c2b3c" height="60" rx="2" width="30" x="636" y="145"></rect>
+<rect fill="#1c2b3c" height="60" rx="2" width="30" x="674" y="145"></rect>
+<rect fill="#1c2b3c" height="60" rx="2" width="30" x="712" y="145"></rect>
+<rect fill="#1c2b3c" height="60" rx="2" width="30" x="750" y="145"></rect>
+</g>
+<!-- Admin Block & Exam Store - CONTROLLED ZONE (Solar Gold) -->
+<g class="transition-transform hover:opacity-90 cursor-pointer">
+<rect fill="#0e141f" height="130" rx="8" stroke="#ee9800" stroke-opacity="0.5" stroke-width="1.5" width="230" x="520" y="270"></rect>
+<rect fill="#ee9800" fill-opacity="0.1" height="126" rx="6" width="226" x="522" y="272"></rect>
+<text fill="#ffb95f" font-family="Space Grotesk" font-size="14" font-weight="600" x="535" y="298">Exam Store · Admin Block</text>
+<text fill="#ffddb8" font-family="JetBrains Mono" font-size="9" x="535" y="315">VAULT WING // HIGH CLEARANCE</text>
+<rect fill="#06090e" height="50" rx="4" width="198" x="536" y="330"></rect>
+<text fill="#a78b7d" font-family="Geist" font-size="11" x="546" y="360">Corridor 204 • Sealed Archive Gates</text>
+</g>
+<!-- West Quad & Library - PUBLIC/MONITORED -->
+<g class="transition-transform hover:opacity-90 cursor-pointer">
+<rect fill="#0e141f" height="180" rx="8" stroke="#584237" stroke-width="1" width="280" x="80" y="80"></rect>
+<text fill="#d4e4fa" font-family="Space Grotesk" font-size="15" font-weight="600" x="96" y="110">University Library &amp; West Quad</text>
+<text fill="#a78b7d" font-family="JetBrains Mono" font-size="9" x="96" y="128">PUBLIC MONITORED // 18 CAMERAS</text>
+<!-- Quad lawn vector with warm amber touch -->
+<rect fill="#ee9800" fill-opacity="0.05" height="100" rx="4" width="248" x="96" y="142"></rect>
+<circle cx="220" cy="192" fill="#f97316" fill-opacity="0.1" r="28"></circle>
+<text fill="#ffb95f" font-family="JetBrains Mono" font-size="10" x="180" y="196">CENTRAL ATRIUM</text>
+</g>
+<!-- Hostels & Dining Hall -->
+<g class="transition-transform hover:opacity-90 cursor-pointer">
+<rect fill="#0e141f" height="180" rx="8" stroke="#584237" stroke-width="1" width="240" x="80" y="330"></rect>
+<text fill="#d4e4fa" font-family="Space Grotesk" font-size="14" font-weight="600" x="96" y="360">Student Residence &amp; Dining</text>
+<text fill="#a78b7d" font-family="JetBrains Mono" font-size="9" x="96" y="378">RESIDENTIAL DORM A-F // QUIET HOURS ACTIVE</text>
+<rect fill="#122131" height="100" rx="4" width="95" x="96" y="394"></rect>
+<rect fill="#122131" height="100" rx="4" width="105" x="201" y="394"></rect>
+</g>
+<!-- Parking Gate 2 -->
+<g class="cursor-pointer">
+<rect fill="#0e141f" height="90" rx="8" stroke="#584237" stroke-width="1" width="180" x="470" y="450"></rect>
+<text fill="#d4e4fa" font-family="Space Grotesk" font-size="13" font-weight="600" x="486" y="476">Parking Gate 2</text>
+<text fill="#a78b7d" font-family="JetBrains Mono" font-size="9" x="486" y="492">BOOM BARRIER // RFID SENSOR</text>
+</g>
+</svg>
+<!-- INTERACTIVE PINS ON MAP -->
+<!-- CRITICAL Pin: Server Room C (Crisp Crimson) -->
+<div class="absolute top-[135px] left-[730px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<span class="absolute w-8 h-8 rounded-full bg-error/40 animate-ping"></span>
+<div class="relative w-8 h-8 rounded-full bg-error text-white flex items-center justify-center shadow-[0_0_14px_rgba(239,68,68,0.8)] border border-white/30">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div class="mt-1 px-2 py-0.5 rounded bg-error text-white font-code-xs text-code-xs font-semibold shadow-md whitespace-nowrap border border-white/20">
+              #NS-INC-0025 [CRITICAL]
+            </div>
+</div>
+<!-- HIGH Pin: Exam Store (Solar Amber Gold) -->
+<div class="absolute top-[340px] left-[610px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<span class="absolute w-7 h-7 rounded-full bg-primary-container/40 animate-pulse"></span>
+<div class="relative w-7 h-7 rounded-full bg-primary-container text-white flex items-center justify-center shadow-[0_0_12px_rgba(249,115,22,0.8)] border border-[#ffdbca]/40">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+</div>
+<div class="mt-1 px-2 py-0.5 rounded bg-[#122131] border border-primary-container/40 text-primary font-code-xs text-code-xs font-medium shadow whitespace-nowrap">
+              #NS-INC-0024 [HIGH]
+            </div>
+</div>
+<!-- COMMUNITY Pin: Parking Gate 2 (Solar Gold) -->
+<div class="absolute top-[490px] left-[540px] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-black font-semibold flex items-center justify-center shadow-[0_0_10px_rgba(238,152,0,0.6)]">
+<span class="material-symbols-outlined text-[14px]">report</span>
+</div>
+<div class="mt-1 px-1.5 py-0.5 rounded bg-[#122131] border border-secondary/40 text-secondary font-code-xs text-code-xs whitespace-nowrap">
+              #NS-2026-0017
+            </div>
+</div>
+<!-- Solar Amber Status Markers -->
+<div class="absolute top-[160px] left-[200px] flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/15 border border-secondary/30 text-secondary font-code-xs text-code-xs shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_rgba(255,185,95,0.8)]"></span>
+<span>West Quad • SECURE</span>
+</div>
+<div class="absolute top-[410px] left-[170px] flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/15 border border-secondary/30 text-secondary font-code-xs text-code-xs shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_rgba(255,185,95,0.8)]"></span>
+<span>Hostels • NORMAL</span>
+</div>
+<!-- Patrol Unit Marker (Alpha Unit) - Warm Solar Amber/Gold -->
+<div class="absolute top-[280px] left-[430px] -translate-x-1/2 -translate-y-1/2 flex items-center gap-1 px-2 py-1 rounded bg-gradient-to-r from-primary-container to-secondary-container text-white font-code-xs text-code-xs font-semibold shadow-[0_0_14px_rgba(249,115,22,0.7)] border border-white/20">
+<span class="material-symbols-outlined text-[14px]">directions_walk</span>
+<span>Alpha Unit (Guard 02)</span>
+</div>
+<!-- Floating Map Controls HUD -->
+<div class="absolute right-3 top-3 flex flex-col gap-1 bg-[#010f1f]/90 border border-[#584237]/40 backdrop-blur-md p-1 rounded-lg shadow-lg">
+<button class="w-7 h-7 rounded hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="w-7 h-7 rounded hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" title="Zoom Out" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="w-full h-px bg-surface-variant my-0.5"></div>
+<button class="w-7 h-7 rounded hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" title="Reset Camera View" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_center_focus</span>
+</button>
+<button class="w-7 h-7 rounded hover:bg-surface-container-high text-secondary flex items-center justify-center transition-colors" title="Thermal Heatmap Toggle" type="button">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+</button>
+</div>
+<!-- Map Legend Watermark Overlay -->
+<div class="absolute bottom-3 left-3 bg-[#010f1f]/85 border border-[#584237]/40 backdrop-blur px-2.5 py-1.5 rounded text-outline font-code-xs text-code-xs flex items-center gap-3">
+<div class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-error shadow-[0_0_6px_rgba(239,68,68,0.8)]"></span> Critical Sensor</div>
+<div class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-secondary shadow-[0_0_6px_rgba(255,185,95,0.8)]"></span> High Triage</div>
+<div class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-primary-container shadow-[0_0_6px_rgba(249,115,22,0.8)]"></span> Patrol In-transit</div>
+</div>
+</div>
+<!-- Bottom Map Status Strip -->
+<div class="px-space-md py-2.5 bg-[#010f1f] border-t border-[#584237]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs font-code-xs text-code-xs">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">badge</span>
+<span class="font-medium text-on-surface">Active Patrols:</span>
+<span class="text-on-surface-variant">Alpha Unit (<span class="text-secondary font-medium">Exam Store corridor</span>)</span>
+<span class="text-outline">•</span>
+<span class="text-on-surface-variant">Bravo Unit (<span class="text-on-surface">West Quad Perimeter</span>)</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span>Mesh latency:</span>
+<span class="text-secondary font-medium">18ms</span>
+</div>
+</div>
+</div>
+<!-- Tactical CCTV Live Slice Strip -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="rounded-lg bg-[#0d1c2d] border border-[#584237]/40 p-2 shadow flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-outline uppercase truncate">CAM-04 · Server Entry</span>
+<span class="px-1 py-0.2 rounded bg-error-container text-error font-code-xs text-code-xs font-bold border border-error/40 animate-pulse">REC ●</span>
+</div>
+<div class="relative w-full h-20 rounded bg-[#010f1f] overflow-hidden border border-[#584237]/20">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" data-alt="High angle surveillance CCTV camera footage looking down a dark, high-security server corridor with blue and red status server LED lights and industrial flooring in a university operations facility." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrN2AX3vMfycZMkn4_H4_4_Nn2KIJ5hzlu1AjhoF5sdXyQHG9K2ufh_ahf5hodfl-TPwFGIO2Ow0GJD6zdfSDnC0Vdw901mdpIQWgiX2cfwCMxhggZb23_tUPSHbzbPtYNITVCqE5as23349o0r5VLFieUi-bTGM_0gCCqRQoF91ZzJGmayeZn6l8KHxvMwE1ab15oh1VWNoy0boZSCum9QSYGAS9U0bkYSpZF8gay20q_6Wg7OE85Ww')"></div>
+<div class="absolute top-1 left-1.5 font-code-xs text-[9px] text-error bg-background/90 px-1 rounded border border-error/30 font-semibold">THERMAL: 27.4°C [ALERT]</div>
+</div>
+</div>
+<div class="rounded-lg bg-[#0d1c2d] border border-[#584237]/40 p-2 shadow flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-outline uppercase truncate">CAM-12 · Admin Vault</span>
+<span class="font-code-xs text-code-xs text-secondary font-medium">LIVE</span>
+</div>
+<div class="relative w-full h-20 rounded bg-[#010f1f] overflow-hidden border border-[#584237]/20">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" data-alt="Night vision security monitor view of a locked institutional hallway outside a records vault, motion trail ghosting visible with timestamp in the corner and concrete walls." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRQwTgln-tNqELyPino1EDPop9mKdNiYEX0flcDxKCOGYv6fj6Mt-ZWM8uBEM-6GhWAj2c_ppCI5VXYC85Tp8N0biXx8kTpqZvlUTUxJ9pCNxxXzmTdSXuWHgvkIr-Xnz3bFhFSfvXDvnYeFGnyJ2f4Uegh64yltNKBxfPGCrY4vdeIQXqjxkwIbqSif1maSKMxDGAo4zWG7gWU1bIsO5JjoWfeXTXmLiOJQVrrwfiRalID5QJXzuEyg')"></div>
+<div class="absolute top-1 left-1.5 font-code-xs text-[9px] text-secondary bg-background/90 px-1 rounded border border-secondary/30">LOITER: 15m 12s</div>
+</div>
+</div>
+<div class="rounded-lg bg-[#0d1c2d] border border-[#584237]/40 p-2 shadow flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs text-outline uppercase truncate">CAM-08 · West Quad</span>
+<span class="font-code-xs text-code-xs text-secondary font-medium">LIVE</span>
+</div>
+<div class="relative w-full h-20 rounded bg-[#010f1f] overflow-hidden border border-[#584237]/20">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" data-alt="Clear outdoor night campus security view of a modern glass-walled library atrium and grassy quad lawn with gentle warm ground lights and patrol route path." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdtyIJnTWthSVlNkDE55wev910ALDFCpFFlyjOJzTeSeiLfuwvItL6fE4f9YXkLTAv5DQL4l6zepkLIbpPmmNDVP6-paQep07FAvGEeXxFVfKWpSHVjZR2YLH_ofjU-pGpoQtvIr9QUU4U2m_WhFr78gI47_7QX2GuCrkyvDYMsKkg2_j_e6mnkuuuGkkcEtixJcraj7Uj36hiVgN0ihx4db-OGRv49sMum-sJnXFx0PNLspHk1lWLPg')"></div>
+<div class="absolute top-1 left-1.5 font-code-xs text-[9px] text-secondary bg-background/90 px-1 rounded border border-secondary/30">PATROL: BRAVO ON SITE</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: REAL-TIME ACTIVE INCIDENT QUEUE (5 cols = ~42%) -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<!-- Queue Section Header -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Active Operational Queue</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container border border-error/50 text-error font-code-xs text-code-xs font-semibold">3 require action</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_rgba(255,185,95,0.8)] animate-ping"></span>
+<span class="font-code-xs text-code-xs text-outline uppercase tracking-wider">Live Stream</span>
+</div>
+</div>
+<!-- INCIDENT CARD 1: CRITICAL (Emergency Salience Crimson) -->
+<div class="rounded-xl bg-[#0d1c2d] border border-error/50 p-space-md shadow-xl flex flex-col gap-space-sm relative overflow-hidden group hover:border-error transition-colors">
+<!-- Accent top border glow for Critical -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-error shadow-[0_0_10px_rgba(239,68,68,0.9)]"></div>
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-error"></div>
+<!-- Card Header Badges -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-error text-white font-code-xs text-code-xs font-bold uppercase tracking-wider flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">emergency_home</span>
+              CRITICAL
+            </span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 border border-secondary/40 text-secondary font-code-xs text-code-xs font-bold uppercase tracking-wider">
+              SIMULATED EVENT
+            </span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">02:17 AM (7m ago)</span>
+</div>
+<!-- Title & Location -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Restricted Area Activity</h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-error">location_on</span>
+<span class="font-medium text-on-surface">Server Room · Block C</span>
+<span class="text-outline text-body-sm">(Restricted Zone)</span>
+</div>
+</div>
+<!-- Incident Metadata pills -->
+<div class="flex flex-wrap items-center gap-1.5 font-code-xs text-code-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high border border-[#584237]/30 text-on-surface-variant">
+            Source: CCTV Telemetry + Thermal
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high border border-[#584237]/30 text-on-surface-variant">
+            Sensor ID: #TH-092
+          </span>
+</div>
+<!-- Incident Description -->
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-[#06090e] border border-[#584237]/30 p-2.5 rounded-lg leading-relaxed">
+          Unexpected motion detected beyond secondary card-swipe threshold outside authorized maintenance windows. No badge swipe registered in electronic access log.
+        </p>
+<!-- AI Assist Ethical Badge -->
+<div class="p-2 rounded bg-surface-container border border-primary/20 flex items-start gap-2 shadow-inner">
+<span class="material-symbols-outlined text-secondary text-[17px] flex-shrink-0 mt-0.5">psychology</span>
+<div class="flex flex-col">
+<span class="font-code-xs text-code-xs text-on-surface font-medium">AI Alert: Unscheduled presence detected</span>
+<span class="font-code-xs text-code-xs text-outline flex items-center gap-1">
+              Confidence 94% • <span class="text-primary font-semibold">Requires human verification</span>
+</span>
+</div>
+</div>
+<!-- Card Actions (Solar Flare Orange Primary) -->
+<div class="pt-space-xs flex items-center gap-space-sm">
+<button class="flex-1 h-8 rounded bg-primary-container hover:bg-inverse-primary text-white font-label-md text-label-md font-semibold flex items-center justify-center gap-1 transition-all shadow-[0_0_12px_rgba(249,115,22,0.4)] border border-[#ffb690]/30" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+            Acknowledge
+          </button>
+<button class="h-8 px-space-md rounded bg-surface-container-high hover:bg-surface-variant border border-primary/30 text-primary hover:text-white font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">send_time_extension</span>
+            Quick Dispatch
+          </button>
+</div>
+</div>
+<!-- INCIDENT CARD 2: HIGH (Solar Amber Gold) -->
+<div class="rounded-xl bg-[#0d1c2d] border border-secondary/40 p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden group hover:border-secondary transition-colors">
+<!-- Amber accent border indicator -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary shadow-[0_0_8px_rgba(255,185,95,0.7)]"></div>
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-secondary"></div>
+<!-- Header -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-secondary text-black font-code-xs text-code-xs font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+              HIGH
+            </span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 border border-secondary/40 text-secondary font-code-xs text-code-xs font-bold uppercase tracking-wider">
+              SIMULATED EVENT
+            </span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">11:58 PM</span>
+</div>
+<!-- Title & Location -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">After-Hours Activity</h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+<span class="font-medium text-on-surface">Exam Store · Admin Block</span>
+</div>
+</div>
+<!-- Metadata -->
+<div class="flex flex-wrap items-center gap-1.5 font-code-xs text-code-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high border border-[#584237]/30 text-on-surface-variant">Source: CCTV Analytics</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high border border-[#584237]/30 text-on-surface-variant">Zone: Controlled Level 2</span>
+</div>
+<!-- Context Description -->
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-[#06090e] border border-[#584237]/30 p-2.5 rounded-lg leading-relaxed">
+          Loitering detected near locked archives door for 15+ minutes. Optical sensor flagged intermittent flashlight beam along baseboard.
+        </p>
+<!-- AI Assist Chip -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container border border-[#584237]/30 font-code-xs text-code-xs text-outline">
+<span class="material-symbols-outlined text-secondary text-[15px]">verified_user</span>
+<span>Requires human verification before automated dispatch trigger</span>
+</div>
+<!-- Card Actions (Solar Amber Styled) -->
+<div class="pt-space-xs flex items-center gap-space-sm">
+<button class="flex-1 h-8 rounded bg-primary-container/20 hover:bg-primary-container border border-primary/50 text-primary hover:text-white font-label-md text-label-md font-medium flex items-center justify-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span>
+            Acknowledge
+          </button>
+<button class="h-8 px-space-md rounded bg-[#06090e] hover:bg-surface-container-high border border-[#584237]/40 text-outline hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+            Dismiss False Positive
+          </button>
+</div>
+</div>
+<!-- INCIDENT CARD 3: ATTENTION / COMMUNITY SAFETY -->
+<div class="rounded-xl bg-[#0d1c2d] border border-[#584237]/40 p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden group hover:border-secondary/60 transition-colors">
+<!-- Solar Flare Gold accent indicator -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-secondary-container"></div>
+<!-- Header -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-black font-code-xs text-code-xs font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">info</span>
+              ATTENTION
+            </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high border border-[#584237]/30 text-on-surface-variant font-code-xs text-code-xs uppercase">
+              Community Report
+            </span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">12m ago</span>
+</div>
+<!-- Title & Location -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Unattended Equipment Bag</h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+<span class="font-medium text-on-surface">Exam Store corridor · Opp Room 204</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 font-code-xs text-code-xs text-outline">
+<span>Submitted by Student Sarah A. via Mobile App</span>
+<span>•</span>
+<span class="text-secondary font-medium">#NS-2026-0017</span>
+</div>
+<!-- Context Description -->
+<p class="font-body-sm text-body-sm text-on-surface-variant bg-[#06090e] border border-[#584237]/30 p-2.5 rounded-lg leading-relaxed">
+          Black canvas duffel bag observed resting against radiator for roughly 45 mins. No visible identifying tags or labels.
+        </p>
+<!-- Card Actions (Solar Amber/Gold Styled) -->
+<div class="pt-space-xs flex items-center gap-space-sm">
+<button class="flex-1 h-8 rounded bg-surface-container-high hover:bg-surface-variant border border-secondary/40 text-secondary hover:text-white font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">description</span>
+            Review Report Details
+          </button>
+<button class="h-8 px-space-md rounded bg-primary-container hover:bg-inverse-primary text-white font-label-md text-label-md font-medium flex items-center justify-center gap-1 transition-all shadow-[0_0_12px_rgba(249,115,22,0.35)]" type="button">
+<span class="material-symbols-outlined text-[15px]">person_add</span>
+            Assign Patrol
+          </button>
+</div>
+</div>
+<!-- ETHICAL AI GOVERNANCE MANDATE FOOTER -->
+<div class="mt-space-xs p-space-sm rounded-lg bg-[#010f1f] border border-[#584237]/40 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">shield_with_heart</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-tight">Ethical AI Mandate Active</span>
+<p class="font-code-xs text-code-xs text-outline leading-tight">
+            AI detects and prioritises anomalies. All security actions require decisive human authorization.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline micro-interaction script for clock telemetry -->
+<script>
+  (function() {
+    function updateClock() {
+      const clockEl = document.getElementById('clock');
+      if (!clockEl) return;
+      const now = new Date();
+      const hrs = String(now.getUTCHours() + 1).padStart(2, '0');
+      const mins = String(now.getUTCMinutes()).padStart(2, '0');
+      const secs = String(now.getUTCSeconds()).padStart(2, '0');
+      clockEl.textContent = `${hrs}:${mins}:${secs} UTC+1`;
+    }
+    setInterval(updateClock, 1000);
+  })();
+</script></main></div></body></html>
